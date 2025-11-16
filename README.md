@@ -32,18 +32,55 @@ Dependencies:
 - `gazebo` 11 (classic)
 - `ros2-humble`
 - `ros2-humble-gazebo-{ros,msgs,dev,plugins}`
-- `poetry`
-- `direnv`
+- `python3-pip`
+- `direnv` (optional)
 - `just`
 
-`direnv` is useful for automating the environment setup with `.envrc` instead of sourcing manually.
-The poetry venv is also set up in `.envrc`. The first time `.envrc` is sourced, the file
-`./install/local_setup.bash` doesn't exist so it will throw a warning. After running
-`colcon build`, this should be fine. The `.envrc` has only been tested on arch linux.
-Modify it according to your system, if necessary.
-```
-$ poetry install
-$ colcon build
+### Installation
+
+1. Install Python dependencies:
+```bash
+pip install -r requirements.txt
 ```
 
+2. Build the ROS2 workspace:
+```bash
+colcon build
+```
+
+3. Source the environment:
+```bash
+source /opt/ros/humble/setup.bash
+source ./install/local_setup.bash
+```
+
+`direnv` is useful for automating the environment setup with `.envrc` instead of sourcing manually.
+The first time `.envrc` is sourced, the file `./install/local_setup.bash` doesn't exist so it will 
+throw a warning. After running `colcon build`, this should be fine. The `.envrc` has only been 
+tested on arch linux. Modify it according to your system, if necessary.
+
 Then exit and enter the directory to source the new environment.
+
+### Launch Commands
+
+You can use the following `just` commands to run the simulator:
+
+**Launch car only (simplest option):**
+```bash
+just car-only
+```
+
+**Launch with all objects (traffic lights, signs, pedestrians, etc.):**
+```bash
+just all-objects
+```
+
+**Run control example:**
+```bash
+just control_example
+```
+
+**Run camera example:**
+```bash
+just camera_example
+```
