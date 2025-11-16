@@ -6,3 +6,5 @@ log/
 .catkin_workspace
 src/CMakeLists.txt
 **/*.pyc
+
+.vscode/
