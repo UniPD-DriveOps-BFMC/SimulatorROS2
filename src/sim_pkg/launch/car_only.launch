@@ -1,0 +1,49 @@
+<!--
+  Car-Only Test Launch Configuration
+  
+  Minimal test environment with just the car model in an empty world.
+  Useful for quick testing of car control, sensors, and plugin functionality
+  without the overhead of loading the complete track and environment.
+  
+  Features:
+  - Empty world with just the ground plane
+  - Single car model spawned at origin
+  - All ROS 2 bridges configured (command, feedback, IMU, GPS)
+  - Car control, IMU, and GPS plugins loaded
+  
+  Usage:
+    ros2 launch sim_pkg car_only.launch
+  
+  Control the car:
+    ros2 run example tl_talker
+  
+  Note: This configuration is optimized for development and testing.
+-->
+<?xml version="1.0"?>
+<launch>
+  <!-- Gazebo sim with minimal car-only world -->
+  <executable cmd="gz sim -v 4 -r $(find-pkg-share sim_pkg)/worlds/car_only.world" output="both">
+    <env name="GZ_SIM_RESOURCE_PATH" value="$(find-pkg-share models_pkg)" />
+    <env name="GZ_SIM_SYSTEM_PLUGIN_PATH" value="$(find-pkg-prefix car_plugin)/lib:$(find-pkg-prefix bno055_plugin)/lib:$(find-pkg-prefix gps_plugin)/lib" />
+  </executable>
+
+  <!-- Spawn the car model at origin (0, 0, 0.5) -->
+  <node pkg="ros_gz_sim" exec="create" name="spawn_car" output="both"
+        args="-file $(find-pkg-share models_pkg)/rcCar_assembly/model.sdf -name automobile -x 0 -y 0 -z 0.5"/>
+
+  <!-- Bridge for command topic (ROS -> Gazebo) -->
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" name="command_bridge" output="both"
+        args="/automobile/command@std_msgs/msg/String@gz.msgs.StringMsg"/>
+
+  <!-- Bridge for feedback topic (Gazebo -> ROS) -->
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" name="feedback_bridge" output="both"
+        args="/automobile/feedback@std_msgs/msg/String[gz.msgs.StringMsg"/>
+
+  <!-- Bridge for IMU sensor (Gazebo -> ROS) -->
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" name="imu_bridge" output="both"
+        args="/automobile/IMU@geometry_msgs/msg/Vector3[gz.msgs.Vector3d"/>
+
+  <!-- Bridge for GPS/Localisation sensor (Gazebo -> ROS) -->
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" name="gps_bridge" output="both"
+        args="/automobile/localisation@geometry_msgs/msg/Pose[gz.msgs.Pose"/>
+</launch>

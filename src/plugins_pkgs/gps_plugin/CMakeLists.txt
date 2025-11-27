@@ -1,18 +1,25 @@
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.5)
 project(gps_plugin)
 
 find_package(ament_cmake REQUIRED)
-find_package(gazebo_dev REQUIRED)
-find_package(gazebo_ros REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(utils REQUIRED)
+find_package(gz-sim8 REQUIRED)
+find_package(gz-plugin2 REQUIRED)
+find_package(gz-math7 REQUIRED)
+find_package(gz-transport13 REQUIRED)
+find_package(gz-msgs10 REQUIRED)
 
-link_directories(${gazebo_dev_LIBRARY_DIRS})
-include_directories(include ${GAZEBO_INCLUDE_DIRS})
-
-add_library(gps_plugin SHARED src/gps_plugin.cpp include/gps_plugin.hpp)
+add_library(gps_plugin SHARED src/gps_plugin.cpp)
 target_include_directories(gps_plugin PUBLIC include)
+target_link_libraries(gps_plugin 
+  gz-sim8::gz-sim8
+  gz-plugin2::gz-plugin2
+  gz-math7::gz-math7
+  gz-transport13::gz-transport13
+  gz-msgs10::gz-msgs10
+)
 
-ament_target_dependencies(gps_plugin "gazebo_dev" "gazebo_ros" "rclcpp" "utils")
-ament_export_dependencies(gazebo_ros gazebo_ros utils)
+install(TARGETS gps_plugin
+  DESTINATION lib)
+
 ament_package()
+

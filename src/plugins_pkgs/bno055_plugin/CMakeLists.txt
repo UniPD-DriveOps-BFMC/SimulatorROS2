@@ -1,16 +1,25 @@
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.5)
 project(bno055_plugin)
 
 find_package(ament_cmake REQUIRED)
-find_package(gazebo_dev REQUIRED)
-find_package(gazebo_ros REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(utils REQUIRED)
+find_package(gz-sim8 REQUIRED)
+find_package(gz-plugin2 REQUIRED)
+find_package(gz-math7 REQUIRED)
+find_package(gz-transport13 REQUIRED)
+find_package(gz-msgs10 REQUIRED)
 
-link_directories(${gazebo_dev_LIBRARY_DIRS} ${GAZEBO_LIBRARY_DIRS})
-include_directories(include)
-add_library(bno055_plugin SHARED src/bno055_plugin.cpp include/bno055_plugin.hpp)
+add_library(bno055_plugin SHARED src/bno055_plugin.cpp)
+target_include_directories(bno055_plugin PUBLIC include)
+target_link_libraries(bno055_plugin 
+  gz-sim8::gz-sim8
+  gz-plugin2::gz-plugin2
+  gz-math7::gz-math7
+  gz-transport13::gz-transport13
+  gz-msgs10::gz-msgs10
+)
 
-ament_target_dependencies(bno055_plugin "gazebo_dev" "gazebo_ros" "utils")
-ament_export_dependencies(gazebo_ros rclcpp utils)
+install(TARGETS bno055_plugin
+  DESTINATION lib)
+
 ament_package()
+

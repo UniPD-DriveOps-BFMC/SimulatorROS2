@@ -1,87 +1,112 @@
 #include "traffic_light_plugin.hpp"
+#include <gz/sim/components/Link.hh>
+#include <gz/sim/Link.hh>
 
 #define DEBUG false
 
-namespace gazebo
-{
-    namespace trafficLight
-    {   
-        TrafficLight::TrafficLight():ModelPlugin() {}
+namespace trafficLight
+{   
+    TrafficLight::TrafficLight() {}
 
-        void TrafficLight::Load(physics::ModelPtr model_ptr, sdf::ElementPtr sdf_ptr)
-        {        	
-			// Save a pointer to the model for later use
-            this->m_ros_node = gazebo_ros::Node::Get(sdf_ptr);
-			this->m_model = model_ptr;
-			this->name = this->m_model->GetName();
-			
-        	// Create transport node
-			this->m_node = transport::NodePtr(new transport::Node());
-			this->m_node->Init();
-        	
-            // TODO: I don't see "~/light/modify" anywhere else in the codebase, where is it used?
-        	this->m_pubLight = this->m_node->Advertise<gazebo::msgs::Light>("~/light/modify");
-        	
-        	// Save pointers to each link of the traffic light (aka lens)
-        	this->m_green_lens_link		= this->m_model->GetLink("green_lens");
-			this->m_yellow_lens_link	= this->m_model->GetLink("yellow_lens");
-			this->m_red_lens_link	 	= this->m_model->GetLink("red_lens");
-      	
-			// Create a subscriber
-			this->m_ros_subscriber = this->m_ros_node->create_subscription<std_msgs::msg::Byte>("/automobile/trafficlight/" + this->name, 1, std::bind(&trafficLight::TrafficLight::OnRosMsg, this, std::placeholders::_1));
+    void TrafficLight::Configure(const gz::sim::Entity &_entity,
+                                 const std::shared_ptr<const sdf::Element> &_sdf,
+                                 gz::sim::EntityComponentManager &_ecm,
+                                 gz::sim::EventManager &/*_eventMgr*/)
+    {
+        this->entity = _entity;
+        this->initialized = false;
 
-			if(DEBUG)
-            {
-                auto logger = this->m_ros_node->get_logger();
-                std::cerr << "\n\n";
-                RCLCPP_INFO_STREAM(logger, "====================================================================");
-                RCLCPP_INFO_STREAM(logger, "[traffic_light_plugin] attached to: " << this->name);
-                RCLCPP_INFO_STREAM(logger, "[traffic_light_plugin] listen to: /traffic_light_topic ");
-                RCLCPP_INFO_STREAM(logger, "====================================================================");
-            }
-        }
+        auto nameComp = _ecm.Component<gz::sim::components::Name>(_entity);
+        this->name = nameComp ? nameComp->Data() : "unknown";
 
-		// defining the traffic_light states
-        void TrafficLight::redState(const bool state)
+        rclcpp::NodeOptions node_options;
+        node_options.arguments({"--ros-args", "-r", "__node:=traffic_light_plugin_node_" + this->name});
+        this->m_ros_node = std::make_shared<rclcpp::Node>("traffic_light_plugin_" + this->name, node_options);
+
+        gz::sim::Model model(_entity);
+        this->greenLensEntity = model.LinkByName(_ecm, "green_lens");
+        this->yellowLensEntity = model.LinkByName(_ecm, "yellow_lens");
+        this->redLensEntity = model.LinkByName(_ecm, "red_lens");
+
+        if (this->greenLensEntity == gz::sim::kNullEntity || 
+            this->yellowLensEntity == gz::sim::kNullEntity || 
+            this->redLensEntity == gz::sim::kNullEntity)
         {
-        	this->m_msg.set_name(this->m_red_lens_link->GetScopedName() + "::" + static_cast<std::string>("red_lens_light"));
-		 	this->m_msg.set_range(state? 5 : 0);
-			this->m_pubLight->Publish(m_msg);
+            std::cerr << "[traffic_light_plugin] ERROR: Could not find lens links for " << this->name << std::endl;
         }
-        
-        void TrafficLight::yellowState(const bool state)
-        {
-        	this->m_msg.set_name(this->m_yellow_lens_link->GetScopedName() + "::" + static_cast<std::string>("yellow_lens_light"));
-		 	this->m_msg.set_range(state? 5 : 0);
-			this->m_pubLight->Publish(m_msg);
-        }
-        void TrafficLight::greenState(const bool state)
-        
-        {
-        	this->m_msg.set_name(this->m_green_lens_link->GetScopedName() + "::" + static_cast<std::string>("green_lens_light"));
-		 	this->m_msg.set_range(state? 5 : 0);
-			this->m_pubLight->Publish(m_msg);
-        }
-        
-        // Handle an incoming message from ROS
-		// _msg A float value that is used to set the velocity
-		void TrafficLight::OnRosMsg(std_msgs::msg::Byte _msg)
-		{
-			switch(_msg.data)
-			{
-				case TrafficLightColor::RED:
-					redState(1); yellowState(0); greenState(0);
-					break;
 
-				case TrafficLightColor::YELLOW:
-					redState(0); yellowState(1); greenState(0);
-					break;
+        this->m_ros_subscriber = this->m_ros_node->create_subscription<std_msgs::msg::Byte>(
+            "/automobile/trafficlight/" + this->name, 
+            1, 
+            std::bind(&TrafficLight::OnRosMsg, this, std::placeholders::_1));
 
-				case TrafficLightColor::GREEN:
-					redState(0); yellowState(0); greenState(1);
-					break;
-			}
-		};
-    }; //namespace trafficLight
-    GZ_REGISTER_MODEL_PLUGIN(trafficLight::TrafficLight)
-}; // namespace gazebo
+        if(DEBUG)
+        {
+            auto logger = this->m_ros_node->get_logger();
+            std::cerr << "\n\n";
+            RCLCPP_INFO_STREAM(logger, "====================================================================");
+            RCLCPP_INFO_STREAM(logger, "[traffic_light_plugin] attached to: " << this->name);
+            RCLCPP_INFO_STREAM(logger, "[traffic_light_plugin] listen to: /automobile/trafficlight/" << this->name);
+            RCLCPP_INFO_STREAM(logger, "====================================================================");
+        }
+    }
+
+    void TrafficLight::SetLightState(gz::sim::EntityComponentManager &_ecm, 
+                                     gz::sim::Entity lightEntity, 
+                                     bool state)
+    {
+        if (lightEntity == gz::sim::kNullEntity)
+            return;
+
+        auto lightCmd = _ecm.Component<gz::sim::components::LightCmd>(lightEntity);
+        gz::msgs::Light lightMsg;
+        lightMsg.set_range(state ? 5.0 : 0.0);
+        lightMsg.set_attenuation_linear(state ? 0.0 : 1.0);
+
+        if (!lightCmd)
+        {
+            _ecm.CreateComponent(lightEntity, gz::sim::components::LightCmd(lightMsg));
+        }
+        else
+        {
+            *lightCmd = gz::sim::components::LightCmd(lightMsg);
+        }
+    }
+
+    void TrafficLight::PreUpdate(const gz::sim::UpdateInfo &_info, gz::sim::EntityComponentManager &_ecm)
+    {
+        if (_info.paused)
+            return;
+
+        rclcpp::spin_some(this->m_ros_node);
+        
+        switch(this->currentLightState)
+        {
+            case TrafficLightColor::RED:
+                SetLightState(_ecm, redLensEntity, true);
+                SetLightState(_ecm, yellowLensEntity, false);
+                SetLightState(_ecm, greenLensEntity, false);
+                break;
+            case TrafficLightColor::YELLOW:
+                SetLightState(_ecm, redLensEntity, false);
+                SetLightState(_ecm, yellowLensEntity, true);
+                SetLightState(_ecm, greenLensEntity, false);
+                break;
+            case TrafficLightColor::GREEN:
+                SetLightState(_ecm, redLensEntity, false);
+                SetLightState(_ecm, yellowLensEntity, false);
+                SetLightState(_ecm, greenLensEntity, true);
+                break;
+        }
+    }
+
+    void TrafficLight::OnRosMsg(std_msgs::msg::Byte _msg)
+    {
+        this->currentLightState = _msg.data;
+    }
+};
+
+GZ_ADD_PLUGIN(trafficLight::TrafficLight,
+              gz::sim::System,
+              trafficLight::TrafficLight::ISystemConfigure,
+              trafficLight::TrafficLight::ISystemPreUpdate)

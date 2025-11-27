@@ -1,15 +1,39 @@
+<!--
+  Main Gazebo Simulator Launch File
+  
+  This launch file starts the Gazebo Sim (Harmonic) simulator with the BFMC
+  world and all required custom plugins. It configures environment variables
+  for plugin and model discovery.
+  
+  Arguments:
+    gui (default: true) - Launch with GUI. Set to false for headless mode.
+  
+  Environment Variables:
+    GZ_SIM_SYSTEM_PLUGIN_PATH - Paths to custom Gazebo plugins (car, IMU, GPS, etc.)
+    GZ_SIM_RESOURCE_PATH - Path to custom model definitions
+  
+  World: world_with_separators.world (includes track, signs, and traffic lights)
+  
+  Usage:
+    With GUI:    ros2 launch sim_pkg gazebo.launch
+    Headless:    ros2 launch sim_pkg gazebo.launch gui:=false
+-->
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-  <!-- TODO: This is used for the _REC variants, but I'm unsure how it's used. -->
   <arg name="gui" default="true" />
 
-  <include file="$(find-pkg-share gazebo_ros)/launch/gzserver.launch.py">
-    <arg name="verbose" value="true" />
-    <arg name="world" value="$(find-pkg-share sim_pkg)/worlds/world_with_separators.world" />
-    <arg name="extra_gazebo_args" value="--server-plugin libgazebo_ros_init.so --server-plugin libgazebo_ros_factory.so" />
-  </include>
+  <!-- Configure plugin paths for custom car, sensor, and environment plugins -->
+  <let name="gz_plugin_path" value="$(find-pkg-prefix bno055_plugin)/lib:$(find-pkg-prefix gps_plugin)/lib:$(find-pkg-prefix car_plugin)/lib:$(find-pkg-prefix traffic_light_plugin)/lib:$(find-pkg-prefix pedestrian_object_plugin)/lib" />
 
-  <include if="$(var gui)" file="$(find-pkg-share gazebo_ros)/launch/gzclient.launch.py">
-    <arg name="verbose" value="true" />
-  </include>
+  <!-- Launch Gazebo with GUI -->
+  <executable cmd="gz sim $(find-pkg-share sim_pkg)/worlds/world_with_separators.world -r" output="screen" if="$(var gui)">
+    <env name="GZ_SIM_SYSTEM_PLUGIN_PATH" value="$(var gz_plugin_path)" />
+    <env name="GZ_SIM_RESOURCE_PATH" value="$(find-pkg-share models_pkg)" />
+  </executable>
+  
+  <!-- Launch Gazebo headless (server-only mode) -->
+  <executable cmd="gz sim $(find-pkg-share sim_pkg)/worlds/world_with_separators.world -r -s" output="screen" unless="$(var gui)">
+    <env name="GZ_SIM_SYSTEM_PLUGIN_PATH" value="$(var gz_plugin_path)" />
+    <env name="GZ_SIM_RESOURCE_PATH" value="$(find-pkg-share models_pkg)" />
+  </executable>
 </launch>

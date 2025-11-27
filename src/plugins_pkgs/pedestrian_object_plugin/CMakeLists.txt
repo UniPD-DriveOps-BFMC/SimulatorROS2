@@ -3,12 +3,9 @@ cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project(pedestrian_object_plugin)
 
 find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(gazebo_dev REQUIRED)
-find_package(gazebo_ros REQUIRED)
-
-link_directories(${gazebo_dev_LIBRARY_DIRS})
-include_directories(include ${Boost_INCLUDE_DIR} ${GAZEBO_INCLUDE_DIRS})
+find_package(gz-sim8 REQUIRED)
+find_package(gz-plugin2 REQUIRED)
+find_package(gz-math7 REQUIRED)
 
 add_library(pedestrian_object_plugin SHARED
  src/geometric_point.cpp
@@ -18,5 +15,13 @@ add_library(pedestrian_object_plugin SHARED
 )
 
 target_include_directories(pedestrian_object_plugin PUBLIC include)
-ament_target_dependencies(pedestrian_object_plugin gazebo_dev gazebo_ros rclcpp)
+target_link_libraries(pedestrian_object_plugin 
+  gz-sim8::gz-sim8
+  gz-plugin2::gz-plugin2
+  gz-math7::gz-math7
+)
+
+install(TARGETS pedestrian_object_plugin
+  DESTINATION lib)
+
 ament_package()

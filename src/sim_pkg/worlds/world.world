@@ -1,6 +1,6 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 
-<sdf version="1.6">
+<sdf version="1.9">
 
 	<world name="bfmc_official">
 	  	<gravity> 0.0 0.0 -9.8</gravity>
@@ -8,8 +8,8 @@
 
 		<light type="point" name="c1">
 			<pose> 		0 0 2 0 0 0 	</pose>
-			<diffuse>	125 125 125 125	</diffuse>
-			<specular> 	125 125 125 125	</specular>
+			<diffuse>	0.5 0.5 0.5 1	</diffuse>
+			<specular> 	0.5 0.5 0.5 1	</specular>
 			<attenuation>
 				<range> 	20 		</range>
 				<constant>   0.3 	</constant>
@@ -21,8 +21,8 @@
 
 		<light type="point" name="c2">
 			<pose> 		15 0 2 0 0 0 	</pose>
-			<diffuse>	125 125 125 125	</diffuse>
-			<specular> 	125 125 125 125	</specular>
+			<diffuse>	0.5 0.5 0.5 1	</diffuse>
+			<specular> 	0.5 0.5 0.5 1	</specular>
 			<attenuation>
 				<range> 	20 		</range>
 				<constant>   0.3 	</constant>
@@ -35,8 +35,8 @@
 
 		<light type="point" name="c3">
 			<pose> 		0 -15 2 0 0 0 	</pose>
-			<diffuse>	125 125 125 125	</diffuse>
-			<specular> 	125 125 125 125	</specular>
+			<diffuse>	0.5 0.5 0.5 1	</diffuse>
+			<specular> 	0.5 0.5 0.5 1	</specular>
 			<attenuation>
 				<range> 	20 		</range>
 				<constant>   0.3 	</constant>
@@ -49,8 +49,8 @@
 
 		<light type="point" name="c4">
 			<pose> 		15 -15 2 0 0 0 	</pose>
-			<diffuse>	125 125 125 125	</diffuse>
-			<specular> 	125 125 125 125	</specular>
+			<diffuse>	0.5 0.5 0.5 1	</diffuse>
+			<specular> 	0.5 0.5 0.5 1	</specular>
 			<attenuation>
 				<range> 	50 		</range>
 				<constant>   0.3 	</constant>
@@ -62,13 +62,10 @@
 
 
 
-		<include>
-			<scale> 1 1 1 </scale>
-			<uri>model://track</uri>
-			<pose> 7.340 -7.495 </pose>
-	  	</include>
-
-	</world>
+	<include>
+		<uri>model://track</uri>
+		<pose>7.340 -7.495 0 0 0 0</pose>
+  	</include>	</world>
 
 </sdf>
 

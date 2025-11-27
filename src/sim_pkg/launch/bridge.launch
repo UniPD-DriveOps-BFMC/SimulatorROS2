@@ -1,0 +1,37 @@
+<launch>
+    <!-- 
+    ROS 2 <-> Gazebo Transport Bridge
+    
+    This launch file sets up topic bridging between ROS 2 and Gazebo Transport
+    for the car control plugin and sensor plugins.
+    
+    Topics bridged:
+    - /automobile/command: ROS 2 -> Gazebo (car control commands)
+    - /automobile/feedback: Gazebo -> ROS 2 (command acknowledgments)
+    - /automobile/IMU: Gazebo -> ROS 2 (IMU sensor data - roll, pitch, yaw)
+    - /automobile/localisation: Gazebo -> ROS 2 (GPS/localization data)
+    -->
+    
+    <!-- Bridge for car control commands (ROS 2 -> Gazebo) -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="command_bridge"
+          args="/automobile/command@std_msgs/msg/String@gz.msgs.StringMsg">
+    </node>
+    
+    <!-- Bridge for car feedback (Gazebo -> ROS 2) -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="feedback_bridge"
+          args="/automobile/feedback@std_msgs/msg/String[gz.msgs.StringMsg">
+    </node>
+    
+    <!-- Bridge for IMU sensor (Gazebo -> ROS 2) -->
+    <!-- Note: gz.msgs.Vector3d maps to geometry_msgs/msg/Vector3 -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="imu_bridge"
+          args="/automobile/IMU@geometry_msgs/msg/Vector3[gz.msgs.Vector3d">
+    </node>
+    
+    <!-- Bridge for GPS/Localisation sensor (Gazebo -> ROS 2) -->
+    <!-- Note: gz.msgs.Pose maps to geometry_msgs/msg/Pose -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="gps_bridge"
+          args="/automobile/localisation@geometry_msgs/msg/Pose[gz.msgs.Pose">
+    </node>
+    
+</launch>

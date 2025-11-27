@@ -1,12 +1,12 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 
-<sdf version='1.6'>
+<sdf version='1.9'>
   <world name='bfmc_official'>
     <gravity>0 0 -9.8</gravity>
     <light name='c1' type='point'>
-      <pose frame=''>0 0 2 0 -0 0</pose>
-      <diffuse>125 125 125 125</diffuse>
-      <specular>50 50 50 50</specular>
+      <pose>0 0 2 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
       <attenuation>
         <range>20</range>
         <constant>0.3</constant>
@@ -17,9 +17,9 @@
       <direction>0 0 -1</direction>
     </light>
     <light name='c2' type='point'>
-      <pose frame=''>15 0 2 0 -0 0</pose>
-      <diffuse>125 125 125 125</diffuse>
-      <specular>50 50 50 50</specular>
+      <pose>15 0 2 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
       <attenuation>
         <range>20</range>
         <constant>0.3</constant>
@@ -30,9 +30,9 @@
       <direction>0 0 -1</direction>
     </light>
     <light name='c3' type='point'>
-      <pose frame=''>0 -15 2 0 -0 0</pose>
-      <diffuse>125 125 125 125</diffuse>
-      <specular>50 50 50 50</specular>
+      <pose>0 -15 2 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
       <attenuation>
         <range>20</range>
         <constant>0.3</constant>
@@ -43,9 +43,9 @@
       <direction>0 0 -1</direction>
     </light>
     <light name='c4' type='point'>
-      <pose frame=''>15 -15 2 0 -0 0</pose>
-      <diffuse>125 125 125 125</diffuse>
-      <specular>50 50 50 50</specular>
+      <pose>15 -15 2 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
       <attenuation>
         <range>50</range>
         <constant>0.3</constant>
@@ -95,20 +95,19 @@
           <material>
             <ambient>1 1 1 1</ambient>
             <diffuse>1 1 1 1</diffuse>
-            <specular>0 0 0 0</specular>
-            <emissive>1 1 1 1</emissive>
-            <script>
-              <uri>model://track/materials/scripts</uri>
-              <uri>model://track/materials/textures</uri>
-              <name>BFMC_MATERIAL</name>
-            </script>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://track/materials/textures/2024_Small.png</albedo_map>
+              </metal>
+            </pbr>
           </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>7.34 -7.495 0 0 -0 0</pose>
+      <pose>7.34 -7.495 0 0 -0 0</pose>
     </model>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -134,7 +133,7 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <model name='separator_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -145,15 +144,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -180,7 +179,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -236,10 +235,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>6.38806 -13.5317 0.044642 0 -0 1.57324</pose>
+      <pose>6.38806 -13.5317 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -250,15 +249,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -285,7 +284,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -341,10 +340,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>6.52931 -13.5311 0.044642 0 -0 1.57324</pose>
+      <pose>6.52931 -13.5311 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -355,15 +354,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -390,7 +389,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -446,10 +445,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>6.67069 -13.5307 0.044642 0 -0 1.57324</pose>
+      <pose>6.67069 -13.5307 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -460,15 +459,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -495,7 +494,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -551,10 +550,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>6.81255 -13.5305 0.044642 0 -0 1.57324</pose>
+      <pose>6.81255 -13.5305 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -565,15 +564,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -600,7 +599,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -656,10 +655,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>6.95349 -13.5302 0.044642 0 -0 1.57324</pose>
+      <pose>6.95349 -13.5302 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -670,15 +669,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -705,7 +704,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -761,10 +760,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>7.09476 -13.5299 0.044642 0 -0 1.57324</pose>
+      <pose>7.09476 -13.5299 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -775,15 +774,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -810,7 +809,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -866,10 +865,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>7.23664 -13.5303 0.044642 0 -0 1.57324</pose>
+      <pose>7.23664 -13.5303 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -880,15 +879,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -915,7 +914,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -971,10 +970,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>7.37782 -13.5302 0.044642 0 -0 1.57324</pose>
+      <pose>7.37782 -13.5302 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_0'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -985,15 +984,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1020,7 +1019,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1076,10 +1075,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>7.51909 -13.5303 0.044642 0 -0 1.57324</pose>
+      <pose>7.51909 -13.5303 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_1'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -1090,15 +1089,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1125,7 +1124,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1181,10 +1180,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>7.66047 -13.5302 0.044642 0 -0 1.57324</pose>
+      <pose>7.66047 -13.5302 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -1195,15 +1194,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1230,7 +1229,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1286,10 +1285,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>7.80269 -13.5308 0.044642 0 -0 1.57324</pose>
+      <pose>7.80269 -13.5308 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -1300,15 +1299,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1335,7 +1334,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1391,10 +1390,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>7.9422 -13.5158 0.044642 0 -0 1.62929</pose>
+      <pose>7.9422 -13.5158 0.044642 0 -0 1.62929</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -1405,15 +1404,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1440,7 +1439,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1496,10 +1495,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>8.08556 -13.4969 0.044642 0 -0 1.68163</pose>
+      <pose>8.08556 -13.4969 0.044642 0 -0 1.68163</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -1510,15 +1509,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1545,7 +1544,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1601,10 +1600,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>8.22455 -13.4732 0.044642 0 -0 1.71814</pose>
+      <pose>8.22455 -13.4732 0.044642 0 -0 1.71814</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -1615,15 +1614,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1650,7 +1649,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1706,10 +1705,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>8.36241 -13.4393 0.044642 0 -0 1.77492</pose>
+      <pose>8.36241 -13.4393 0.044642 0 -0 1.77492</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -1720,15 +1719,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1755,7 +1754,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1811,10 +1810,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>8.50005 -13.3999 0.044642 0 -0 1.82339</pose>
+      <pose>8.50005 -13.3999 0.044642 0 -0 1.82339</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -1825,15 +1824,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1860,7 +1859,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1916,10 +1915,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>8.63591 -13.3537 0.044642 0 -0 1.87376</pose>
+      <pose>8.63591 -13.3537 0.044642 0 -0 1.87376</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -1930,15 +1929,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -1965,7 +1964,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2021,10 +2020,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>8.77029 -13.3001 0.044642 0 -0 1.93725</pose>
+      <pose>8.77029 -13.3001 0.044642 0 -0 1.93725</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2035,15 +2034,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2070,7 +2069,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2126,10 +2125,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>8.90142 -13.2397 0.044642 0 -0 1.98791</pose>
+      <pose>8.90142 -13.2397 0.044642 0 -0 1.98791</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2140,15 +2139,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2175,7 +2174,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2231,10 +2230,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.03025 -13.1748 0.044642 0 -0 2.02995</pose>
+      <pose>9.03025 -13.1748 0.044642 0 -0 2.02995</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2245,15 +2244,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2280,7 +2279,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2336,10 +2335,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.15316 -13.1034 0.044642 0 -0 2.05697</pose>
+      <pose>9.15316 -13.1034 0.044642 0 -0 2.05697</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2350,15 +2349,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2385,7 +2384,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2441,10 +2440,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.27531 -13.0273 0.044642 0 -0 2.12953</pose>
+      <pose>9.27531 -13.0273 0.044642 0 -0 2.12953</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2455,15 +2454,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2490,7 +2489,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2546,10 +2545,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.39107 -12.9448 0.044642 0 -0 2.16994</pose>
+      <pose>9.39107 -12.9448 0.044642 0 -0 2.16994</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2560,15 +2559,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2595,7 +2594,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2651,10 +2650,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.50155 -12.8579 0.044642 0 -0 2.20818</pose>
+      <pose>9.50155 -12.8579 0.044642 0 -0 2.20818</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2665,15 +2664,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2700,7 +2699,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2756,10 +2755,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.61363 -12.761 0.044642 0 -0 2.27891</pose>
+      <pose>9.61363 -12.761 0.044642 0 -0 2.27891</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2770,15 +2769,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2805,7 +2804,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2861,10 +2860,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.71749 -12.661 0.044642 0 -0 2.31423</pose>
+      <pose>9.71749 -12.661 0.044642 0 -0 2.31423</pose>
     </model>
     <model name='separator_clone_clone_0'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2875,15 +2874,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2910,7 +2909,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -2966,10 +2965,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>6.24779 -13.5307 0.044642 0 -0 1.57324</pose>
+      <pose>6.24779 -13.5307 0.044642 0 -0 1.57324</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -2980,15 +2979,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -3015,7 +3014,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -3071,10 +3070,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.81521 -12.5562 0.044642 0 -0 2.39177</pose>
+      <pose>9.81521 -12.5562 0.044642 0 -0 2.39177</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -3085,15 +3084,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -3120,7 +3119,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -3176,10 +3175,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.9129 -12.4464 0.044642 0 -0 2.39177</pose>
+      <pose>9.9129 -12.4464 0.044642 0 -0 2.39177</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -3190,15 +3189,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -3225,7 +3224,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -3281,7 +3280,7 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.0031 -12.3324 0.044642 0 -0 2.43888</pose>
+      <pose>10.0031 -12.3324 0.044642 0 -0 2.43888</pose>
     </model>
     <state world_name='bfmc_official'>
       <sim_time>3298 615000000</sim_time>
@@ -3289,740 +3288,740 @@
       <wall_time>1612351022 602891391</wall_time>
       <iterations>3298615</iterations>
       <model name='separator_clone'>
-        <pose frame=''>6.38806 -13.5317 0.044642 0 -0 1.57324</pose>
+        <pose>6.38806 -13.5317 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>6.38806 -13.5317 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>6.38806 -13.5317 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone'>
-        <pose frame=''>6.52931 -13.5311 0.044642 0 -0 1.57324</pose>
+        <pose>6.52931 -13.5311 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>6.52931 -13.5311 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>6.52931 -13.5311 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_0'>
-        <pose frame=''>6.24779 -13.5307 0.044642 0 -0 1.57324</pose>
+        <pose>6.24779 -13.5307 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>6.24779 -13.5307 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>6.24779 -13.5307 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone'>
-        <pose frame=''>6.67069 -13.5307 0.044642 0 -0 1.57324</pose>
+        <pose>6.67069 -13.5307 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>6.67069 -13.5307 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>6.67069 -13.5307 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone'>
-        <pose frame=''>6.81255 -13.5305 0.044642 0 -0 1.57324</pose>
+        <pose>6.81255 -13.5305 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>6.81255 -13.5305 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>6.81255 -13.5305 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone'>
-        <pose frame=''>6.95349 -13.5302 0.044642 0 -0 1.57324</pose>
+        <pose>6.95349 -13.5302 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>6.95349 -13.5302 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>6.95349 -13.5302 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>7.09476 -13.5299 0.044642 0 -0 1.57324</pose>
+        <pose>7.09476 -13.5299 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>7.09476 -13.5299 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>7.09476 -13.5299 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>7.23664 -13.5303 0.044642 0 -0 1.57324</pose>
+        <pose>7.23664 -13.5303 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>7.23664 -13.5303 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>7.23664 -13.5303 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>7.37782 -13.5302 0.044642 0 -0 1.57324</pose>
+        <pose>7.37782 -13.5302 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>7.37782 -13.5302 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>7.37782 -13.5302 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_0'>
-        <pose frame=''>7.51909 -13.5303 0.044642 0 -0 1.57324</pose>
+        <pose>7.51909 -13.5303 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>7.51909 -13.5303 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>7.51909 -13.5303 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_1'>
-        <pose frame=''>7.66047 -13.5302 0.044642 0 -0 1.57324</pose>
+        <pose>7.66047 -13.5302 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>7.66047 -13.5302 0.044642 0 -0 1.57324</pose>
+        <link name='separator_link_0'>
+          <pose>7.66047 -13.5302 0.044642 0 -0 1.57324</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2'>
-        <pose frame=''>7.80241 -13.5261 0.044642 0 -0 1.62929</pose>
+        <pose>7.80241 -13.5261 0.044642 0 -0 1.62929</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>7.80241 -13.5261 0.044642 0 -0 1.62929</pose>
+        <link name='separator_link_0'>
+          <pose>7.80241 -13.5261 0.044642 0 -0 1.62929</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone'>
-        <pose frame=''>7.94451 -13.5142 0.044642 0 -0 1.68163</pose>
+        <pose>7.94451 -13.5142 0.044642 0 -0 1.68163</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>7.94451 -13.5142 0.044642 0 -0 1.68163</pose>
+        <link name='separator_link_0'>
+          <pose>7.94451 -13.5142 0.044642 0 -0 1.68163</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone'>
-        <pose frame=''>8.0853 -13.4952 0.044642 0 -0 1.71814</pose>
+        <pose>8.0853 -13.4952 0.044642 0 -0 1.71814</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>8.0853 -13.4952 0.044642 0 -0 1.71814</pose>
+        <link name='separator_link_0'>
+          <pose>8.0853 -13.4952 0.044642 0 -0 1.71814</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone'>
-        <pose frame=''>8.22385 -13.4698 0.044642 0 -0 1.77492</pose>
+        <pose>8.22385 -13.4698 0.044642 0 -0 1.77492</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>8.22385 -13.4698 0.044642 0 -0 1.77492</pose>
+        <link name='separator_link_0'>
+          <pose>8.22385 -13.4698 0.044642 0 -0 1.77492</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone'>
-        <pose frame=''>8.36199 -13.4377 0.044642 0 -0 1.82339</pose>
+        <pose>8.36199 -13.4377 0.044642 0 -0 1.82339</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>8.36199 -13.4377 0.044642 0 -0 1.82339</pose>
+        <link name='separator_link_0'>
+          <pose>8.36199 -13.4377 0.044642 0 -0 1.82339</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone'>
-        <pose frame=''>8.49966 -13.3986 0.044642 0 -0 1.87376</pose>
+        <pose>8.49966 -13.3986 0.044642 0 -0 1.87376</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>8.49966 -13.3986 0.044642 0 -0 1.87376</pose>
+        <link name='separator_link_0'>
+          <pose>8.49966 -13.3986 0.044642 0 -0 1.87376</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>8.63562 -13.3529 0.044642 0 -0 1.93725</pose>
+        <pose>8.63562 -13.3529 0.044642 0 -0 1.93725</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>8.63562 -13.3529 0.044642 0 -0 1.93725</pose>
+        <link name='separator_link_0'>
+          <pose>8.63562 -13.3529 0.044642 0 -0 1.93725</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>8.76947 -13.2983 0.044642 0 -0 1.98791</pose>
+        <pose>8.76947 -13.2983 0.044642 0 -0 1.98791</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>8.76947 -13.2983 0.044642 0 -0 1.98791</pose>
+        <link name='separator_link_0'>
+          <pose>8.76947 -13.2983 0.044642 0 -0 1.98791</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>8.90079 -13.2384 0.044642 0 -0 2.02995</pose>
+        <pose>8.90079 -13.2384 0.044642 0 -0 2.02995</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>8.90079 -13.2384 0.044642 0 -0 2.02995</pose>
+        <link name='separator_link_0'>
+          <pose>8.90079 -13.2384 0.044642 0 -0 2.02995</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.03025 -13.1748 0.044642 0 -0 2.05697</pose>
+        <pose>9.03025 -13.1748 0.044642 0 -0 2.05697</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.03025 -13.1748 0.044642 0 -0 2.05697</pose>
+        <link name='separator_link_0'>
+          <pose>9.03025 -13.1748 0.044642 0 -0 2.05697</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.15316 -13.1034 0.044642 0 -0 2.12953</pose>
+        <pose>9.15316 -13.1034 0.044642 0 -0 2.12953</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.15316 -13.1034 0.044642 0 -0 2.12953</pose>
+        <link name='separator_link_0'>
+          <pose>9.15316 -13.1034 0.044642 0 -0 2.12953</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.27531 -13.0273 0.044642 0 -0 2.16994</pose>
+        <pose>9.27531 -13.0273 0.044642 0 -0 2.16994</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.27531 -13.0273 0.044642 0 -0 2.16994</pose>
+        <link name='separator_link_0'>
+          <pose>9.27531 -13.0273 0.044642 0 -0 2.16994</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.39107 -12.9448 0.044642 0 -0 2.20818</pose>
+        <pose>9.39107 -12.9448 0.044642 0 -0 2.20818</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.39107 -12.9448 0.044642 0 -0 2.20818</pose>
+        <link name='separator_link_0'>
+          <pose>9.39107 -12.9448 0.044642 0 -0 2.20818</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.50524 -12.8547 0.044642 0 -0 2.27891</pose>
+        <pose>9.50524 -12.8547 0.044642 0 -0 2.27891</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.50524 -12.8547 0.044642 0 -0 2.27891</pose>
+        <link name='separator_link_0'>
+          <pose>9.50524 -12.8547 0.044642 0 -0 2.27891</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.61363 -12.761 0.044642 0 -0 2.31423</pose>
+        <pose>9.61363 -12.761 0.044642 0 -0 2.31423</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.61363 -12.761 0.044642 0 -0 2.31423</pose>
+        <link name='separator_link_0'>
+          <pose>9.61363 -12.761 0.044642 0 -0 2.31423</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.71749 -12.661 0.044642 0 -0 2.39177</pose>
+        <pose>9.71749 -12.661 0.044642 0 -0 2.39177</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.71749 -12.661 0.044642 0 -0 2.39177</pose>
+        <link name='separator_link_0'>
+          <pose>9.71749 -12.661 0.044642 0 -0 2.39177</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.81521 -12.5562 0.044642 0 -0 2.39177</pose>
+        <pose>9.81521 -12.5562 0.044642 0 -0 2.39177</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.81521 -12.5562 0.044642 0 -0 2.39177</pose>
+        <link name='separator_link_0'>
+          <pose>9.81521 -12.5562 0.044642 0 -0 2.39177</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.9129 -12.4464 0.044642 0 -0 2.43888</pose>
+        <pose>9.9129 -12.4464 0.044642 0 -0 2.43888</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.9129 -12.4464 0.044642 0 -0 2.43888</pose>
+        <link name='separator_link_0'>
+          <pose>9.9129 -12.4464 0.044642 0 -0 2.43888</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.0031 -12.3324 0.044642 0 -0 2.50868</pose>
+        <pose>10.0031 -12.3324 0.044642 0 -0 2.50868</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.0031 -12.3324 0.044642 0 -0 2.50868</pose>
+        <link name='separator_link_0'>
+          <pose>10.0031 -12.3324 0.044642 0 -0 2.50868</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.0861 -12.2144 0.044642 0 -0 2.54929</pose>
+        <pose>10.0861 -12.2144 0.044642 0 -0 2.54929</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.0861 -12.2144 0.044642 0 -0 2.54929</pose>
+        <link name='separator_link_0'>
+          <pose>10.0861 -12.2144 0.044642 0 -0 2.54929</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.1623 -12.0917 0.044642 0 -0 2.59981</pose>
+        <pose>10.1623 -12.0917 0.044642 0 -0 2.59981</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.1623 -12.0917 0.044642 0 -0 2.59981</pose>
+        <link name='separator_link_0'>
+          <pose>10.1623 -12.0917 0.044642 0 -0 2.59981</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.2314 -11.9673 0.044642 0 -0 2.65247</pose>
+        <pose>10.2314 -11.9673 0.044642 0 -0 2.65247</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.2314 -11.9673 0.044642 0 -0 2.65247</pose>
+        <link name='separator_link_0'>
+          <pose>10.2314 -11.9673 0.044642 0 -0 2.65247</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.294 -11.8407 0.044642 0 -0 2.72834</pose>
+        <pose>10.294 -11.8407 0.044642 0 -0 2.72834</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.294 -11.8407 0.044642 0 -0 2.72834</pose>
+        <link name='separator_link_0'>
+          <pose>10.294 -11.8407 0.044642 0 -0 2.72834</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.3501 -11.7095 0.044642 0 -0 2.72834</pose>
+        <pose>10.3501 -11.7095 0.044642 0 -0 2.72834</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.3501 -11.7095 0.044642 0 -0 2.72834</pose>
+        <link name='separator_link_0'>
+          <pose>10.3501 -11.7095 0.044642 0 -0 2.72834</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.4015 -11.5772 0.044642 0 -0 2.77348</pose>
+        <pose>10.4015 -11.5772 0.044642 0 -0 2.77348</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.4015 -11.5772 0.044642 0 -0 2.77348</pose>
+        <link name='separator_link_0'>
+          <pose>10.4015 -11.5772 0.044642 0 -0 2.77348</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.4472 -11.4419 0.044642 0 -0 2.83585</pose>
+        <pose>10.4472 -11.4419 0.044642 0 -0 2.83585</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.4472 -11.4419 0.044642 0 -0 2.83585</pose>
+        <link name='separator_link_0'>
+          <pose>10.4472 -11.4419 0.044642 0 -0 2.83585</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.4863 -11.3058 0.044642 0 -0 2.90525</pose>
+        <pose>10.4863 -11.3058 0.044642 0 -0 2.90525</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.4863 -11.3058 0.044642 0 -0 2.90525</pose>
+        <link name='separator_link_0'>
+          <pose>10.4863 -11.3058 0.044642 0 -0 2.90525</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.5166 -11.1677 0.044642 0 -0 2.94946</pose>
+        <pose>10.5166 -11.1677 0.044642 0 -0 2.94946</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.5166 -11.1677 0.044642 0 -0 2.94946</pose>
+        <link name='separator_link_0'>
+          <pose>10.5166 -11.1677 0.044642 0 -0 2.94946</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.5399 -11.0283 0.044642 0 -0 2.99042</pose>
+        <pose>10.5399 -11.0283 0.044642 0 -0 2.99042</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.5399 -11.0283 0.044642 0 -0 2.99042</pose>
+        <link name='separator_link_0'>
+          <pose>10.5399 -11.0283 0.044642 0 -0 2.99042</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.5605 -10.8885 0.044642 0 -0 3.04562</pose>
+        <pose>10.5605 -10.8885 0.044642 0 -0 3.04562</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.5605 -10.8885 0.044642 0 -0 3.04562</pose>
+        <link name='separator_link_0'>
+          <pose>10.5605 -10.8885 0.044642 0 -0 3.04562</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.5708 -10.7475 0.044642 0 -0 3.07687</pose>
+        <pose>10.5708 -10.7475 0.044642 0 -0 3.07687</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.5708 -10.7475 0.044642 0 -0 3.07687</pose>
+        <link name='separator_link_0'>
+          <pose>10.5708 -10.7475 0.044642 0 -0 3.07687</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.5738 -10.606 0.044642 0 -0 -3.12201</pose>
+        <pose>10.5738 -10.606 0.044642 0 -0 -3.12201</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.5738 -10.606 0.044642 0 -0 -3.12201</pose>
+        <link name='separator_link_0'>
+          <pose>10.5738 -10.606 0.044642 0 -0 -3.12201</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.5712 -10.4602 0.044642 0 0 -3.12201</pose>
+        <pose>10.5712 -10.4602 0.044642 0 0 -3.12201</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.5712 -10.4602 0.044642 0 0 -3.12201</pose>
+        <link name='separator_link_0'>
+          <pose>10.5712 -10.4602 0.044642 0 0 -3.12201</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.5638 -10.3195 0.044642 0 0 -3.04003</pose>
+        <pose>10.5638 -10.3195 0.044642 0 0 -3.04003</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.5638 -10.3195 0.044642 0 0 -3.04003</pose>
+        <link name='separator_link_0'>
+          <pose>10.5638 -10.3195 0.044642 0 0 -3.04003</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.5489 -10.1779 0.044642 0 0 -3.0227</pose>
+        <pose>10.5489 -10.1779 0.044642 0 0 -3.0227</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.5489 -10.1779 0.044642 0 0 -3.0227</pose>
+        <link name='separator_link_0'>
+          <pose>10.5489 -10.1779 0.044642 0 0 -3.0227</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.5276 -10.0389 0.044642 0 0 -2.9299</pose>
+        <pose>10.5276 -10.0389 0.044642 0 0 -2.9299</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.5276 -10.0389 0.044642 0 0 -2.9299</pose>
+        <link name='separator_link_0'>
+          <pose>10.5276 -10.0389 0.044642 0 0 -2.9299</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.4963 -9.9013 0.044642 0 0 -2.91058</pose>
+        <pose>10.4963 -9.9013 0.044642 0 0 -2.91058</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.4963 -9.9013 0.044642 0 0 -2.91058</pose>
+        <link name='separator_link_0'>
+          <pose>10.4963 -9.9013 0.044642 0 0 -2.91058</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.4607 -9.76405 0.044642 0 0 -2.84827</pose>
+        <pose>10.4607 -9.76405 0.044642 0 0 -2.84827</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.4607 -9.76405 0.044642 0 0 -2.84827</pose>
+        <link name='separator_link_0'>
+          <pose>10.4607 -9.76405 0.044642 0 0 -2.84827</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.4157 -9.62846 0.044642 0 0 -2.80879</pose>
+        <pose>10.4157 -9.62846 0.044642 0 0 -2.80879</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.4157 -9.62846 0.044642 0 0 -2.80879</pose>
+        <link name='separator_link_0'>
+          <pose>10.4157 -9.62846 0.044642 0 0 -2.80879</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.3677 -9.49477 0.044642 0 0 -2.77073</pose>
+        <pose>10.3677 -9.49477 0.044642 0 0 -2.77073</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.3677 -9.49477 0.044642 0 0 -2.77073</pose>
+        <link name='separator_link_0'>
+          <pose>10.3677 -9.49477 0.044642 0 0 -2.77073</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.3152 -9.3641 0.044642 0 0 -2.77073</pose>
+        <pose>10.3152 -9.3641 0.044642 0 0 -2.77073</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.3152 -9.3641 0.044642 0 0 -2.77073</pose>
+        <link name='separator_link_0'>
+          <pose>10.3152 -9.3641 0.044642 0 0 -2.77073</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.2649 -9.23213 0.044642 0 0 -2.77073</pose>
+        <pose>10.2649 -9.23213 0.044642 0 0 -2.77073</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.2649 -9.23213 0.044642 0 0 -2.77073</pose>
+        <link name='separator_link_0'>
+          <pose>10.2649 -9.23213 0.044642 0 0 -2.77073</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0'>
-        <pose frame=''>10.2153 -9.10039 0.044642 0 0 -2.79345</pose>
+        <pose>10.2153 -9.10039 0.044642 0 0 -2.79345</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.2153 -9.10039 0.044642 0 0 -2.79345</pose>
+        <link name='separator_link_0'>
+          <pose>10.2153 -9.10039 0.044642 0 0 -2.79345</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone'>
-        <pose frame=''>10.171 -8.96571 0.044642 0 0 -2.84896</pose>
+        <pose>10.171 -8.96571 0.044642 0 0 -2.84896</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.171 -8.96571 0.044642 0 0 -2.84896</pose>
+        <link name='separator_link_0'>
+          <pose>10.171 -8.96571 0.044642 0 0 -2.84896</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone'>
-        <pose frame=''>10.1303 -8.82861 0.044642 0 0 -2.84896</pose>
+        <pose>10.1303 -8.82861 0.044642 0 0 -2.84896</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.1303 -8.82861 0.044642 0 0 -2.84896</pose>
+        <link name='separator_link_0'>
+          <pose>10.1303 -8.82861 0.044642 0 0 -2.84896</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone'>
-        <pose frame=''>10.0918 -8.69257 0.044642 0 0 -2.8586</pose>
+        <pose>10.0918 -8.69257 0.044642 0 0 -2.8586</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.0918 -8.69257 0.044642 0 0 -2.8586</pose>
+        <link name='separator_link_0'>
+          <pose>10.0918 -8.69257 0.044642 0 0 -2.8586</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone'>
-        <pose frame=''>10.0544 -8.55568 0.044642 0 0 -2.89929</pose>
+        <pose>10.0544 -8.55568 0.044642 0 0 -2.89929</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.0544 -8.55568 0.044642 0 0 -2.89929</pose>
+        <link name='separator_link_0'>
+          <pose>10.0544 -8.55568 0.044642 0 0 -2.89929</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone'>
-        <pose frame=''>10.0232 -8.41831 0.044642 0 0 -2.91386</pose>
+        <pose>10.0232 -8.41831 0.044642 0 0 -2.91386</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>10.0232 -8.41831 0.044642 0 0 -2.91386</pose>
+        <link name='separator_link_0'>
+          <pose>10.0232 -8.41831 0.044642 0 0 -2.91386</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.99442 -8.28076 0.044642 0 0 -2.94815</pose>
+        <pose>9.99442 -8.28076 0.044642 0 0 -2.94815</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.99442 -8.28076 0.044642 0 0 -2.94815</pose>
+        <link name='separator_link_0'>
+          <pose>9.99442 -8.28076 0.044642 0 0 -2.94815</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.96917 -8.14094 0.044642 0 0 -2.96699</pose>
+        <pose>9.96917 -8.14094 0.044642 0 0 -2.96699</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.96917 -8.14094 0.044642 0 0 -2.96699</pose>
+        <link name='separator_link_0'>
+          <pose>9.96917 -8.14094 0.044642 0 0 -2.96699</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.9463 -8.00186 0.044642 0 0 -2.99357</pose>
+        <pose>9.9463 -8.00186 0.044642 0 0 -2.99357</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.9463 -8.00186 0.044642 0 0 -2.99357</pose>
+        <link name='separator_link_0'>
+          <pose>9.9463 -8.00186 0.044642 0 0 -2.99357</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0'>
-        <pose frame=''>9.92639 -7.86181 0.044642 0 0 -3.00797</pose>
+        <pose>9.92639 -7.86181 0.044642 0 0 -3.00797</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.92639 -7.86181 0.044642 0 0 -3.00797</pose>
+        <link name='separator_link_0'>
+          <pose>9.92639 -7.86181 0.044642 0 0 -3.00797</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone'>
-        <pose frame=''>9.90967 -7.71945 0.044642 0 0 -3.04653</pose>
+        <pose>9.90967 -7.71945 0.044642 0 0 -3.04653</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.90967 -7.71945 0.044642 0 0 -3.04653</pose>
+        <link name='separator_link_0'>
+          <pose>9.90967 -7.71945 0.044642 0 0 -3.04653</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone'>
-        <pose frame=''>9.89736 -7.57708 0.044642 0 0 -3.06323</pose>
+        <pose>9.89736 -7.57708 0.044642 0 0 -3.06323</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.89736 -7.57708 0.044642 0 0 -3.06323</pose>
+        <link name='separator_link_0'>
+          <pose>9.89736 -7.57708 0.044642 0 0 -3.06323</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone'>
-        <pose frame=''>9.8882 -7.43587 0.044642 0 0 -3.06323</pose>
+        <pose>9.8882 -7.43587 0.044642 0 0 -3.06323</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.8882 -7.43587 0.044642 0 0 -3.06323</pose>
+        <link name='separator_link_0'>
+          <pose>9.8882 -7.43587 0.044642 0 0 -3.06323</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone'>
-        <pose frame=''>9.87969 -7.29504 0.044642 0 0 -3.08647</pose>
+        <pose>9.87969 -7.29504 0.044642 0 0 -3.08647</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.87969 -7.29504 0.044642 0 0 -3.08647</pose>
+        <link name='separator_link_0'>
+          <pose>9.87969 -7.29504 0.044642 0 0 -3.08647</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.87484 -7.15388 0.044642 0 0 -3.11218</pose>
+        <pose>9.87484 -7.15388 0.044642 0 0 -3.11218</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.87484 -7.15388 0.044642 0 0 -3.11218</pose>
+        <link name='separator_link_0'>
+          <pose>9.87484 -7.15388 0.044642 0 0 -3.11218</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.87432 -7.01094 0.044642 0 0 -3.12953</pose>
+        <pose>9.87432 -7.01094 0.044642 0 0 -3.12953</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.87432 -7.01094 0.044642 0 0 -3.12953</pose>
+        <link name='separator_link_0'>
+          <pose>9.87432 -7.01094 0.044642 0 0 -3.12953</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone'>
-        <pose frame=''>9.87416 -6.86918 0.044642 0 0 -3.12953</pose>
+        <pose>9.87416 -6.86918 0.044642 0 0 -3.12953</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.87416 -6.86918 0.044642 0 0 -3.12953</pose>
+        <link name='separator_link_0'>
+          <pose>9.87416 -6.86918 0.044642 0 0 -3.12953</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_0'>
-        <pose frame=''>9.87395 -6.72628 0.044642 0 0 -3.12953</pose>
+        <pose>9.87395 -6.72628 0.044642 0 0 -3.12953</pose>
         <scale>1 1 1</scale>
-        <link name='separator::separator::link_0'>
-          <pose frame=''>9.87395 -6.72628 0.044642 0 0 -3.12953</pose>
+        <link name='separator_link_0'>
+          <pose>9.87395 -6.72628 0.044642 0 0 -3.12953</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='track'>
-        <pose frame=''>7.34 -7.495 0 0 -0 0</pose>
+        <pose>7.34 -7.495 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>7.34 -7.495 0 0 -0 0</pose>
+          <pose>7.34 -7.495 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <light name='c1'>
-        <pose frame=''>0 0 2 0 -0 0</pose>
+        <pose>0 0 2 0 -0 0</pose>
       </light>
       <light name='c2'>
-        <pose frame=''>15 0 2 0 -0 0</pose>
+        <pose>15 0 2 0 -0 0</pose>
       </light>
       <light name='c3'>
-        <pose frame=''>0 -15 2 0 -0 0</pose>
+        <pose>0 -15 2 0 -0 0</pose>
       </light>
       <light name='c4'>
-        <pose frame=''>15 -15 2 0 -0 0</pose>
+        <pose>15 -15 2 0 -0 0</pose>
       </light>
     </state>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4033,15 +4032,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4068,7 +4067,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4124,10 +4123,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.0868 -12.2134 0.044642 0 -0 2.50868</pose>
+      <pose>10.0868 -12.2134 0.044642 0 -0 2.50868</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4138,15 +4137,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4173,7 +4172,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4229,10 +4228,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.1637 -12.0925 0.044642 0 -0 2.54929</pose>
+      <pose>10.1637 -12.0925 0.044642 0 -0 2.54929</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4243,15 +4242,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4278,7 +4277,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4334,10 +4333,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.2342 -11.9688 0.044642 0 -0 2.59981</pose>
+      <pose>10.2342 -11.9688 0.044642 0 -0 2.59981</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4348,15 +4347,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4383,7 +4382,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4439,10 +4438,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.2986 -11.8427 0.044642 0 -0 2.63896</pose>
+      <pose>10.2986 -11.8427 0.044642 0 -0 2.63896</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4453,15 +4452,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4488,7 +4487,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4544,10 +4543,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.3516 -11.7102 0.044642 0 -0 2.72834</pose>
+      <pose>10.3516 -11.7102 0.044642 0 -0 2.72834</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4558,15 +4557,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4593,7 +4592,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4649,10 +4648,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.4054 -11.5787 0.044642 0 -0 2.72834</pose>
+      <pose>10.4054 -11.5787 0.044642 0 -0 2.72834</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4663,15 +4662,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4698,7 +4697,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4754,10 +4753,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.4512 -11.4432 0.044642 0 -0 2.77348</pose>
+      <pose>10.4512 -11.4432 0.044642 0 -0 2.77348</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4768,15 +4767,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4803,7 +4802,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4859,10 +4858,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.4863 -11.3058 0.044642 0 -0 2.83585</pose>
+      <pose>10.4863 -11.3058 0.044642 0 -0 2.83585</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4873,15 +4872,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4908,7 +4907,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -4964,10 +4963,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.5188 -11.1681 0.044642 0 -0 2.90525</pose>
+      <pose>10.5188 -11.1681 0.044642 0 -0 2.90525</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -4978,15 +4977,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5013,7 +5012,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5069,10 +5068,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.5399 -11.0283 0.044642 0 -0 2.94946</pose>
+      <pose>10.5399 -11.0283 0.044642 0 -0 2.94946</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -5083,15 +5082,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5118,7 +5117,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5174,10 +5173,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.5605 -10.8885 0.044642 0 -0 2.99042</pose>
+      <pose>10.5605 -10.8885 0.044642 0 -0 2.99042</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -5188,15 +5187,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5223,7 +5222,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5279,10 +5278,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.5708 -10.7475 0.044642 0 -0 3.04562</pose>
+      <pose>10.5708 -10.7475 0.044642 0 -0 3.04562</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -5293,15 +5292,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5328,7 +5327,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5384,10 +5383,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.5793 -10.6057 0.044642 0 -0 3.07687</pose>
+      <pose>10.5793 -10.6057 0.044642 0 -0 3.07687</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -5398,15 +5397,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5433,7 +5432,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5489,10 +5488,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.5712 -10.4602 0.044642 0 -0 -3.12201</pose>
+      <pose>10.5712 -10.4602 0.044642 0 -0 -3.12201</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -5503,15 +5502,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5538,7 +5537,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5594,10 +5593,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.5655 -10.3193 0.044642 0 0 -3.12201</pose>
+      <pose>10.5655 -10.3193 0.044642 0 0 -3.12201</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -5608,15 +5607,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5643,7 +5642,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5699,10 +5698,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.5489 -10.1779 0.044642 0 0 -3.04003</pose>
+      <pose>10.5489 -10.1779 0.044642 0 0 -3.04003</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -5713,15 +5712,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5748,7 +5747,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5804,10 +5803,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.5276 -10.0389 0.044642 0 0 -3.0227</pose>
+      <pose>10.5276 -10.0389 0.044642 0 0 -3.0227</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -5818,15 +5817,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5853,7 +5852,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5909,10 +5908,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.4963 -9.9013 0.044642 0 0 -2.9299</pose>
+      <pose>10.4963 -9.9013 0.044642 0 0 -2.9299</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -5923,15 +5922,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -5958,7 +5957,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6014,10 +6013,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.4607 -9.76405 0.044642 0 0 -2.91058</pose>
+      <pose>10.4607 -9.76405 0.044642 0 0 -2.91058</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6028,15 +6027,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6063,7 +6062,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6119,10 +6118,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.4157 -9.62846 0.044642 0 0 -2.84827</pose>
+      <pose>10.4157 -9.62846 0.044642 0 0 -2.84827</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6133,15 +6132,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6168,7 +6167,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6224,10 +6223,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.3677 -9.49477 0.044642 0 0 -2.80879</pose>
+      <pose>10.3677 -9.49477 0.044642 0 0 -2.80879</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6238,15 +6237,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6273,7 +6272,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6329,10 +6328,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.3152 -9.3641 0.044642 0 0 -2.77073</pose>
+      <pose>10.3152 -9.3641 0.044642 0 0 -2.77073</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6343,15 +6342,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6378,7 +6377,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6434,10 +6433,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.2649 -9.23213 0.044642 0 0 -2.77073</pose>
+      <pose>10.2649 -9.23213 0.044642 0 0 -2.77073</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6448,15 +6447,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6483,7 +6482,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6539,10 +6538,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.2153 -9.10039 0.044642 0 0 -2.77073</pose>
+      <pose>10.2153 -9.10039 0.044642 0 0 -2.77073</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6553,15 +6552,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6588,7 +6587,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6644,10 +6643,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.1689 -8.96635 0.044642 0 0 -2.79345</pose>
+      <pose>10.1689 -8.96635 0.044642 0 0 -2.79345</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6658,15 +6657,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6693,7 +6692,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6749,10 +6748,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.1303 -8.82861 0.044642 0 0 -2.84896</pose>
+      <pose>10.1303 -8.82861 0.044642 0 0 -2.84896</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6763,15 +6762,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6798,7 +6797,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6854,10 +6853,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.0918 -8.69257 0.044642 0 0 -2.84896</pose>
+      <pose>10.0918 -8.69257 0.044642 0 0 -2.84896</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6868,15 +6867,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6903,7 +6902,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -6959,10 +6958,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.0544 -8.55568 0.044642 0 0 -2.8586</pose>
+      <pose>10.0544 -8.55568 0.044642 0 0 -2.8586</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -6973,15 +6972,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7008,7 +7007,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7064,10 +7063,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>10.0232 -8.41831 0.044642 0 0 -2.89929</pose>
+      <pose>10.0232 -8.41831 0.044642 0 0 -2.89929</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -7078,15 +7077,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7113,7 +7112,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7169,10 +7168,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.99442 -8.28076 0.044642 0 0 -2.91386</pose>
+      <pose>9.99442 -8.28076 0.044642 0 0 -2.91386</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -7183,15 +7182,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7218,7 +7217,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7274,10 +7273,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.96917 -8.14094 0.044642 0 0 -2.94815</pose>
+      <pose>9.96917 -8.14094 0.044642 0 0 -2.94815</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -7288,15 +7287,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7323,7 +7322,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7379,10 +7378,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.9463 -8.00186 0.044642 0 0 -2.96699</pose>
+      <pose>9.9463 -8.00186 0.044642 0 0 -2.96699</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -7393,15 +7392,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7428,7 +7427,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7484,10 +7483,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.92639 -7.86181 0.044642 0 0 -2.96699</pose>
+      <pose>9.92639 -7.86181 0.044642 0 0 -2.96699</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -7498,15 +7497,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7533,7 +7532,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7589,10 +7588,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.90967 -7.71945 0.044642 0 0 -3.00797</pose>
+      <pose>9.90967 -7.71945 0.044642 0 0 -3.00797</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -7603,15 +7602,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7638,7 +7637,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7694,10 +7693,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.89736 -7.57708 0.044642 0 0 -3.04653</pose>
+      <pose>9.89736 -7.57708 0.044642 0 0 -3.04653</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -7708,15 +7707,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7743,7 +7742,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7799,10 +7798,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.8882 -7.43587 0.044642 0 0 -3.06323</pose>
+      <pose>9.8882 -7.43587 0.044642 0 0 -3.06323</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -7813,15 +7812,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7848,7 +7847,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7904,10 +7903,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.87969 -7.29504 0.044642 0 0 -3.06323</pose>
+      <pose>9.87969 -7.29504 0.044642 0 0 -3.06323</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -7918,15 +7917,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -7953,7 +7952,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -8009,10 +8008,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.87484 -7.15388 0.044642 0 0 -3.08647</pose>
+      <pose>9.87484 -7.15388 0.044642 0 0 -3.08647</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -8023,15 +8022,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -8058,7 +8057,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -8114,10 +8113,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.87432 -7.01094 0.044642 0 0 -3.11218</pose>
+      <pose>9.87432 -7.01094 0.044642 0 0 -3.11218</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -8128,15 +8127,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -8163,7 +8162,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -8219,10 +8218,10 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.87416 -6.86918 0.044642 0 0 -3.12953</pose>
+      <pose>9.87416 -6.86918 0.044642 0 0 -3.12953</pose>
     </model>
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_0'>
-      <link name='separator::separator::link_0'>
+      <link name='separator_link_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -8233,15 +8232,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -8268,7 +8267,7 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>model://separator/meshes/separator.dae</uri>
@@ -8324,11 +8323,11 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>9.87395 -6.72628 0.044642 0 0 -3.12953</pose>
+      <pose>9.87395 -6.72628 0.044642 0 0 -3.12953</pose>
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>1.37037 -20.0726 2.74517 0 0.319643 1.1482</pose>
+        <pose>1.37037 -20.0726 2.74517 0 0.319643 1.1482</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>

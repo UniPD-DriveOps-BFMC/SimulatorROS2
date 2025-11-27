@@ -1,47 +1,51 @@
-#include <thread>
-
-#include <gazebo/gazebo.hh>
-#include <gazebo/common/Plugin.hh>
-#include <gazebo/common/common.hh>
-#include <gazebo/physics/physics.hh>
-#include <gazebo_ros/node.hpp>
-
-#include "rclcpp/rclcpp.hpp"
-
-#include <std_msgs/msg/byte.hpp>
-
 #pragma once
 
-namespace gazebo
-{
-    namespace trafficLight
-    {   
-        enum TrafficLightColor {RED, YELLOW, GREEN};
+#include <thread>
+#include <gz/sim/System.hh>
+#include <gz/sim/Model.hh>
+#include <gz/sim/Util.hh>
+#include <gz/plugin/Register.hh>
+#include <gz/sim/components/Pose.hh>
+#include <gz/sim/components/Name.hh>
+#include <gz/sim/Link.hh>
+#include <gz/sim/components/Light.hh>
+#include <gz/sim/components/LightCmd.hh>
+#include "rclcpp/rclcpp.hpp"
+#include <std_msgs/msg/byte.hpp>
 
-        class TrafficLight: public ModelPlugin
-    	{
-        private: 
-            physics::ModelPtr m_model;
-            rclcpp::Node::SharedPtr m_ros_node;
-            rclcpp::Subscription<std_msgs::msg::Byte>::SharedPtr m_ros_subscriber;
-            std_msgs::msg::Byte                      m_traffic_light_msg;
-            physics::LinkPtr                    m_green_lens_link;
-            physics::LinkPtr                    m_yellow_lens_link;
-            physics::LinkPtr                    m_red_lens_link;
-            std::string                         name;
+namespace trafficLight
+{   
+    enum TrafficLightColor {RED, YELLOW, GREEN};
 
-        public: transport::PublisherPtr         m_pubLight;
-        public: msgs::Light                     m_msg;
-        public: transport::NodePtr              m_node;
+    class TrafficLight: 
+        public gz::sim::System,
+        public gz::sim::ISystemConfigure,
+        public gz::sim::ISystemPreUpdate
+    {
+    private: 
+        gz::sim::Entity entity;
+        gz::sim::Entity greenLensEntity{gz::sim::kNullEntity};
+        gz::sim::Entity yellowLensEntity{gz::sim::kNullEntity};
+        gz::sim::Entity redLensEntity{gz::sim::kNullEntity};
+        rclcpp::Node::SharedPtr m_ros_node;
+        rclcpp::Subscription<std_msgs::msg::Byte>::SharedPtr m_ros_subscriber;
+        std::string name;
+        uint8_t currentLightState{0};
+        bool initialized{false};
 
-        // Default constructor
-        public: TrafficLight();
-        public: void Load(physics::ModelPtr, sdf::ElementPtr);
-        public: void OnRosMsg(std_msgs::msg::Byte);
-        private: void redState(const bool state=0);
-        private: void greenState(const bool state=0);
-        private: void yellowState(const bool state=0);
-        
-        };
-    };    
+    public: 
+        TrafficLight();
+        void Configure(const gz::sim::Entity &_entity,
+                      const std::shared_ptr<const sdf::Element> &_sdf,
+                      gz::sim::EntityComponentManager &_ecm,
+                      gz::sim::EventManager &_eventMgr) override;
+        void PreUpdate(const gz::sim::UpdateInfo &_info,
+                      gz::sim::EntityComponentManager &_ecm) override;
+        void OnRosMsg(std_msgs::msg::Byte);
+
+    private: 
+        void SetLightState(gz::sim::EntityComponentManager &_ecm, 
+                          gz::sim::Entity lightEntity, 
+                          bool state);
+    };
 };

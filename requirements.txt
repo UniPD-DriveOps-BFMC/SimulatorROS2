@@ -1,15 +1,22 @@
+# ROS 2 Python dependencies
 catkin-pkg==1.0.0
-docutils==0.20.1
 empy==3.3.4
-evdev==1.6.1
 lark==1.1.8
-lxml==4.9.4
-numpy==1.26.2
-opencv-python==4.8.1.78
-pynput==1.7.6
-pyparsing==3.1.1
-python-dateutil==2.8.2
-python-xlib==0.33
 PyYAML==6.0.1
 setuptools==69.0.2
+
+# Core utilities
+docutils==0.20.1
+pyparsing==3.1.1
+python-dateutil==2.8.2
 six==1.16.0
+lxml==4.9.4
+
+# Computer vision and numerical processing
+numpy==1.26.2
+opencv-python==4.8.1.78
+
+# Input device handling for keyboard control
+evdev==1.6.1
+pynput==1.7.6
+python-xlib==0.33

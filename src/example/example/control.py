@@ -28,6 +28,27 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 
+"""
+Remote Control Transmitter for BFMC Simulator
+
+This module provides keyboard-based remote control for the simulated car in the
+BFMC (Bosch Future Mobility Challenge) simulator. It captures keyboard input and
+translates it into ROS 2 command messages that control the car's speed and steering.
+
+The controller uses the pynput library to capture keyboard events and publishes
+JSON-formatted commands to the /automobile/command ROS 2 topic.
+
+Key Controls:
+    - w,a,s,d: Directional control
+    - t,g,y,h,u,j,i,k,r,p: Parameter adjustment keys
+    - z,x,v,b,n,m: PID tuning keys
+    - ESC: Emergency stop and exit
+
+Example:
+    To run the control interface:
+        $ ros2 run example tl_talker
+"""
+
 import json
 from pynput import keyboard
 
@@ -36,11 +57,26 @@ from std_msgs.msg import String
 import rclpy
 
 class RemoteControlTransmitterProcess():
-    # ===================================== INIT==========================================
+    """Remote control transmitter for the BFMC simulator car.
+    
+    This class handles keyboard input and converts it into control commands
+    for the simulated RC car. It manages a ROS 2 publisher to send commands
+    and uses pynput to capture keyboard events.
+    
+    Attributes:
+        dirKeys (list): Direction control keys (w,a,s,d)
+        paramKeys (list): Parameter adjustment keys
+        pidKeys (list): PID tuning keys
+        allKeys (list): Combined list of all recognized keys
+        rcBrain (RcBrainThread): Brain thread for command processing
+        publisher (Publisher): ROS 2 publisher for commands
+    """
+    
     def __init__(self):
-        """Run on the PC. It forwards the commans from the user via KeboardListenerThread to the RcBrainThread. 
-        The RcBrainThread converts them into actual commands and sends them to the remote via a socket connection.
+        """Initialize the remote control transmitter.
         
+        Sets up the ROS 2 node and publisher, initializes key mappings,
+        and creates the RC brain thread for command processing.
         """
         self.dirKeys   = ['w', 'a', 's', 'd']
         self.paramKeys = ['t','g','y','h','u','j','i','k', 'r', 'p']
@@ -54,66 +90,72 @@ class RemoteControlTransmitterProcess():
         node = rclpy.create_node('EXAMPLEnode')     
         self.publisher = node.create_publisher(String, '/automobile/command', 1)
 
-    # ===================================== RUN ==========================================
     def run(self):
-        """Apply initializing methods and start the threads. 
+        """Start the keyboard listener and begin processing input.
+        
+        This method blocks until the ESC key is pressed or the listener
+        is otherwise terminated.
         """
         with keyboard.Listener(on_press = self.keyPress, on_release = self.keyRelease) as listener: 
-            print("joining...")
+            print("Starting remote control transmitter...")
+            print("Press ESC to exit")
             listener.join()
 
-    # ===================================== KEY PRESS ====================================
     def keyPress(self,key):
-        """Processing the key pressing 
+        """Handle key press events.
         
-        Parameters
-        ----------
-        key : pynput.keyboard.Key
-            The key pressed
+        Processes alphanumeric key presses and converts them into
+        command messages for the RC car.
+        
+        Args:
+            key (pynput.keyboard.Key): The key that was pressed
         """                                     
         print(key)
-        if key.char in self.allKeys:
+        # Check if key has char attribute (alphanumeric keys)
+        if hasattr(key, 'char') and key.char in self.allKeys:
             keyMsg = 'p.' + str(key.char)
-
             self._send_command(keyMsg)
         
-    # ===================================== KEY RELEASE ==================================
     def keyRelease(self, key):
-        """Processing the key realeasing.
+        """Handle key release events.
         
-        Parameters
-        ----------
-        key : pynput.keyboard.Key
-            The key realeased. 
+        Processes key releases, including the ESC key for emergency stop
+        and exit. Sends appropriate commands when control keys are released.
         
+        Args:
+            key (pynput.keyboard.Key): The key that was released
+            
+        Returns:
+            bool: False if ESC pressed (terminates listener), True otherwise
         """ 
-        if key == keyboard.Key.esc:                        #exit key      
+        if key == keyboard.Key.esc:
+            # Emergency stop: send brake command before exiting
             self.publisher.publish(String(data='{"action":"3","steerAngle":0.0}'))
             return False
 
-        if key.char in self.allKeys:
+        # Check if key has char attribute (alphanumeric keys)
+        if hasattr(key, 'char') and key.char in self.allKeys:
             keyMsg = 'r.'+str(key.char)
-
             self._send_command(keyMsg)
                  
-    # ===================================== SEND COMMAND =================================
     def _send_command(self, key):
-        """Transmite the command to the remotecontrol receiver. 
+        """Send control command to the simulator.
         
-        Parameters
-        ----------
-        inP : Pipe
-            Input pipe. 
+        Converts the key input into a JSON command using the RcBrainThread
+        and publishes it to the /automobile/command topic.
+        
+        Args:
+            key (str): Key identifier string (e.g., 'p.w', 'r.s')
         """
         command = self.rcBrain.getMessage(key)
         if command is not None:
-	
             command = json.dumps(command)
             command = String(data=command)
             self.publisher.publish(command)  
 
 
 def main():
+    """Main entry point for the remote control node."""
     nod = RemoteControlTransmitterProcess()
     nod.run()
             

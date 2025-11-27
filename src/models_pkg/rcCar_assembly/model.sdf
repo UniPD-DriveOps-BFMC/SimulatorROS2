@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<sdf version='1.6'>
+<sdf version='1.9'>
   <model name='automobile'>
     <include>
       <uri>model://chassis</uri>
@@ -61,10 +61,9 @@
     <joint name='joint_leftrear_rim' type='revolute'>
       <parent>chassis::link</parent>
       <child>wheel_rear_left::link_rim</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose>0 0 0 0 -0 0</pose>
       <axis>
         <xyz>0 0 -1</xyz>
-        <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
           <lower>-1.79769e+308</lower>
           <upper>1.79769e+308</upper>
@@ -95,10 +94,9 @@
     <joint name='joint_rightrear_rim' type='revolute'>
       <parent>chassis::link</parent>
       <child>wheel_rear_right::link_rim</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose>0 0 0 0 -0 0</pose>
       <axis>
         <xyz>0 0 -1</xyz>
-        <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
           <lower>-1.79769e+308</lower>
           <upper>1.79769e+308</upper>
@@ -130,10 +128,9 @@
     <joint name='joint_leftfront_steer' type='revolute'>
       <parent>chassis::link</parent>
       <child>steer_left::link_steer</child>
-      <pose frame=''>0 0 0.005 0 -0 0</pose>
+      <pose>0 0 0.005 0 -0 0</pose>
       <axis>
         <xyz>0 1 0</xyz>
-        <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
           <lower>-1.79769e+308</lower>
           <upper>1.79769e+308</upper>
@@ -164,10 +161,9 @@
     <joint name='joint_rightfront_steer' type='revolute'>
       <parent>chassis::link</parent>
       <child>steer_right::link_steer</child>
-      <pose frame=''>0 0 -0.005 0 -0 0</pose>
+      <pose>0 0 -0.005 0 -0 0</pose>
       <axis>
         <xyz>0 1 0</xyz>
-        <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
           <lower>-1.79769e+308</lower>
           <upper>1.79769e+308</upper>
@@ -199,10 +195,9 @@
     <joint name='joint_rightfront_rim' type='revolute'>
       <parent>steer_right::link_steer</parent>
       <child>wheel_front_right::link_rim</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose>0 0 0 0 -0 0</pose>
       <axis>
         <xyz>0 0 -1</xyz>
-        <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
           <lower>-1.79769e+308</lower>
           <upper>1.79769e+308</upper>
@@ -234,10 +229,9 @@
     <joint name='joint_leftfront_rim' type='revolute'>
       <parent>steer_left::link_steer</parent>
       <child>wheel_front_left::link_rim</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose>0 0 0 0 -0 0</pose>
       <axis>
         <xyz>0 0 -1</xyz>
-        <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
           <lower>-1.79769e+308</lower>
           <upper>1.79769e+308</upper>
@@ -269,7 +263,7 @@
     <joint name='joint_body' type='fixed'>
       <parent>chassis::link</parent>
       <child>car_body::link</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose>0 0 0 0 -0 0</pose>
       <physics>
         <ode>
           <limit>
@@ -289,7 +283,7 @@
     <joint name='joint_camera' type='fixed'>
       <parent>chassis::link</parent>
       <child>camera::link_camera</child>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose>0 0 0 0 -0 0</pose>
       <physics>
         <ode>
           <limit>
@@ -305,7 +299,7 @@
     </joint>
 
     <!-- Plugin  -->
-    <plugin name='CarLikeRobotPlugin' filename='libcar_plugin.so'>
+    <plugin name='carlikerobot::CCarLikeRobotRosPlugin' filename='libcar_plugin.so'>
       <wheelbase>0.26</wheelbase>
       <axletrack>0.162</axletrack>
       <wheelradius>0.0325</wheelradius>
@@ -334,8 +328,8 @@
       <robotNamespace>/</robotNamespace>
     </plugin>
 
-    <plugin name='bno055' filename='libbno055_plugin.so'> </plugin>
-    <plugin name='gps' filename='libgps_plugin.so'> </plugin>
+    <plugin name='bno055::BNO055' filename='libbno055_plugin.so'> </plugin>
+    <plugin name='gps::GPS' filename='libgps_plugin.so'> </plugin>
 
 
   </model>
