@@ -2,6 +2,16 @@
 
 <sdf version='1.9'>
   <world name='bfmc_official'>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"></plugin>
+    
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"></plugin>
+    
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"></plugin>
+    
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre</render_engine>
+    </plugin>
+
     <gravity>0 0 -9.8</gravity>
     <light name='c1' type='point'>
       <pose>0 0 2 0 -0 0</pose>

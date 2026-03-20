@@ -34,4 +34,9 @@
           args="/automobile/localisation@geometry_msgs/msg/Pose[gz.msgs.Pose">
     </node>
     
+    <!-- Bridge for camera (Gazebo -> ROS 2) -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="camera_bridge"
+          args="/automobile/image_raw@sensor_msgs/msg/Image[gz.msgs.Image">
+    </node>
+
 </launch>

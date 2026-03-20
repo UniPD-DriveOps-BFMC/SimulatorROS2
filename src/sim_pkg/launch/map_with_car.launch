@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   Complete Simulator Launch Configuration
   
@@ -17,7 +18,6 @@
   After launching, use the control interface:
     ros2 run example tl_talker
 -->
-<?xml version="1.0" encoding="UTF-8"?>
  
 <launch>
   <include file="$(find-pkg-share sim_pkg)/launch/gazebo.launch"/>

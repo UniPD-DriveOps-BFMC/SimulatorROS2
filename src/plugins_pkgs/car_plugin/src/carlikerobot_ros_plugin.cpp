@@ -170,7 +170,7 @@ namespace carlikerobot
             if (this->_steerWheelsAnglePtr != nullptr)
                 this->_steerWheelsAnglePtr->update(this->pendingSteer, _ecm);
             
-            this->hasPendingCommand = false;
+            // this->hasPendingCommand = false;  // Keep applying last command
         }
     }
 
