@@ -10,7 +10,7 @@ sudo apt install ros-jazzy-ros-gz
 curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin
 export PATH=$PATH:~/.local/bin
 
-1 - git clone https://github.com/GIU-F1Tenth/ECC-BFMC-Simulator.git ~/BFMC/SimulatorROS2
+1 - git clone https://github.com/UniPD-DriveOps-BFMC/SimulatorROS2.git
 
 2 - mkdir -p ~/.gz/sim/8
 
@@ -25,7 +25,7 @@ source /opt/ros/jazzy/setup.bash
 source ../install/setup.bash
 just car
 
-6 - from another terminal : 
+6 - from another terminal : (I'm assuming the directory above SimulatorROS2 is called BFMC, change it if it's different for you)
 cd ~/BFMC/SimulatorROS2
 source /opt/ros/jazzy/setup.bash
 source ../install/setup.bash
