@@ -116,19 +116,14 @@
           </mesh>
         </geometry>
         <material>
-          <lighting>1</lighting>
-          <script>
-            <uri>model://stop_sign/materials/scripts</uri>
-            <uri>model://stop_sign/materials/textures</uri>
-            <name>STOP_SIGN</name>
-          </script>
-          <shader type='vertex'>
-            <normal_map>__default__</normal_map>
-          </shader>
-          <ambient>0.3 0.3 0.3 1</ambient>
-          <diffuse>0.7 0.7 0.7 1</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
-          <emissive>0 0 0 1</emissive>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://stop_sign/meshes/StopSign.png</albedo_map>
+            </metal>
+          </pbr>
         </material>
         <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>
@@ -191,8 +186,8 @@
       </collision>
     </link>
     <joint name='support_to_leg_joint' type='fixed'>
-      <parent>link_0</parent>
-      <child>link_1</child>
+      <parent>sign_leg</parent>
+      <child>octagonal_support</child>
       <pose>0 0 0 0 -0 0</pose>
       <physics>
         <ode>

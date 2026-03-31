@@ -13,14 +13,14 @@
   <library_effects>
     <effect id="Material_002-effect">
       <profile_COMMON>
-        <newparam sid="highway_on_png-surface">
+        <newparam sid="enter_highway_sign.png-surface">
           <surface type="2D">
-            <init_from>highway_on_png</init_from>
+            <init_from>enter_highway_sign.png</init_from>
           </surface>
         </newparam>
-        <newparam sid="highway_on_png-sampler">
+        <newparam sid="enter_highway_sign.png-sampler">
           <sampler2D>
-            <source>highway_on_png-surface</source>
+            <source>enter_highway_sign.png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="highway_on_png-sampler" texcoord="UVMap"/>
+              <texture texture="enter_highway_sign.png-sampler" texcoord="UVMap"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -40,8 +40,8 @@
     </effect>
   </library_effects>
   <library_images>
-    <image id="highway_on_png" name="highway_on_png">
-      <init_from>highway_on.png</init_from>
+    <image id="enter_highway_sign.png" name="enter_highway_sign.png">
+      <init_from>enter_highway_sign.png</init_from>
     </image>
   </library_images>
   <library_materials>

@@ -44,8 +44,8 @@ namespace trafficLight
         void OnRosMsg(std_msgs::msg::Byte);
 
     private: 
-        void SetLightState(gz::sim::EntityComponentManager &_ecm, 
-                          gz::sim::Entity lightEntity, 
+        void SetLightState(gz::sim::EntityComponentManager &_ecm,
+                          gz::sim::Entity lightEntity,
                           bool state);
     };
 };

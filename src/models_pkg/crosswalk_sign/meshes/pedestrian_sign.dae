@@ -13,14 +13,14 @@
   <library_effects>
     <effect id="Material_002-effect">
       <profile_COMMON>
-        <newparam sid="crosswalk_png-surface">
+        <newparam sid="pedestrian_sign.png-surface">
           <surface type="2D">
-            <init_from>crosswalk_png</init_from>
+            <init_from>pedestrian_sign.png</init_from>
           </surface>
         </newparam>
-        <newparam sid="crosswalk_png-sampler">
+        <newparam sid="pedestrian_sign.png-sampler">
           <sampler2D>
-            <source>crosswalk_png-surface</source>
+            <source>pedestrian_sign.png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="crosswalk_png-sampler" texcoord="UVMap"/>
+              <texture texture="pedestrian_sign.png-sampler" texcoord="UVMap"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -40,8 +40,8 @@
     </effect>
   </library_effects>
   <library_images>
-    <image id="crosswalk_png" name="crosswalk_png">
-      <init_from>crosswalk.png</init_from>
+    <image id="pedestrian_sign.png" name="pedestrian_sign.png">
+      <init_from>pedestrian_sign.png</init_from>
     </image>
   </library_images>
   <library_materials>

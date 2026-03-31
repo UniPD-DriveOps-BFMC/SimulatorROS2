@@ -3,7 +3,7 @@
 <launch>
   <node
     name  = "RAMP"
-    pkg   = "gazebo_ros"
+    pkg   = "ros_gz_sim"
     exec = "create"
     args  = "-file $(find-pkg-share models_pkg)/ramp/model.sdf -name RAMP -x 0.651761 -y -4.561203 -z 0.0 -R 0 -P 0 -Y 1.569651"/>  
  </launch>

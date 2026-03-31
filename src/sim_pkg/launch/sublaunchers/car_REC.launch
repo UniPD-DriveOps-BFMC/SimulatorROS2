@@ -4,7 +4,7 @@
  
     <node
           name  = "rcCar"
-    	    pkg   = "gazebo_ros"
+    	    pkg   = "ros_gz_sim"
     	    exec = "create"
 	    args  = "-file $(find-pkg-share models_pkg)/rcCar_assembly_REC/model.sdf -name automobile -x 0.82 -y -14.91 -z 0.032939 -Y 1.570796"/>
  

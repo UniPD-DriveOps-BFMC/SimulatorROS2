@@ -13,14 +13,14 @@
   <library_effects>
     <effect id="Material_001-effect">
       <profile_COMMON>
-        <newparam sid="prioritysign_texture_png-surface">
+        <newparam sid="priority_sign.png-surface">
           <surface type="2D">
-            <init_from>prioritysign_texture_png</init_from>
+            <init_from>priority_sign.png</init_from>
           </surface>
         </newparam>
-        <newparam sid="prioritysign_texture_png-sampler">
+        <newparam sid="priority_sign.png-sampler">
           <sampler2D>
-            <source>prioritysign_texture_png-surface</source>
+            <source>priority_sign.png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="prioritysign_texture_png-sampler" texcoord="UVMap"/>
+              <texture texture="priority_sign.png-sampler" texcoord="UVMap"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -40,8 +40,8 @@
     </effect>
   </library_effects>
   <library_images>
-    <image id="prioritysign_texture_png" name="prioritysign_texture_png">
-      <init_from>prioritysign_texture.png</init_from>
+    <image id="priority_sign.png" name="priority_sign.png">
+      <init_from>priority_sign.png</init_from>
     </image>
   </library_images>
   <library_materials>

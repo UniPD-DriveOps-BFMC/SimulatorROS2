@@ -13,14 +13,14 @@
   <library_effects>
     <effect id="Material_001-effect">
       <profile_COMMON>
-        <newparam sid="highway_off_png-surface">
+        <newparam sid="leave_highway_sign.png-surface">
           <surface type="2D">
-            <init_from>highway_off_png</init_from>
+            <init_from>leave_highway_sign.png</init_from>
           </surface>
         </newparam>
-        <newparam sid="highway_off_png-sampler">
+        <newparam sid="leave_highway_sign.png-sampler">
           <sampler2D>
-            <source>highway_off_png-surface</source>
+            <source>leave_highway_sign.png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="highway_off_png-sampler" texcoord="UVMap"/>
+              <texture texture="leave_highway_sign.png-sampler" texcoord="UVMap"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -40,8 +40,8 @@
     </effect>
   </library_effects>
   <library_images>
-    <image id="highway_off_png" name="highway_off_png">
-      <init_from>highway_off.png</init_from>
+    <image id="leave_highway_sign.png" name="leave_highway_sign.png">
+      <init_from>leave_highway_sign.png</init_from>
     </image>
   </library_images>
   <library_materials>

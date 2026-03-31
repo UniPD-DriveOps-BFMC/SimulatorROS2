@@ -142,6 +142,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -247,6 +248,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>6.38806 -13.5317 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -352,6 +355,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>6.52931 -13.5311 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -457,6 +462,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>6.67069 -13.5307 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -562,6 +569,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>6.81255 -13.5305 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -667,6 +676,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>6.95349 -13.5302 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -772,6 +783,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>7.09476 -13.5299 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -877,6 +890,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>7.23664 -13.5303 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -982,6 +997,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>7.37782 -13.5302 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_0'>
       <link name='separator_link_0'>
         <inertial>
@@ -1087,6 +1104,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>7.51909 -13.5303 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_1'>
       <link name='separator_link_0'>
         <inertial>
@@ -1192,6 +1211,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>7.66047 -13.5302 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2'>
       <link name='separator_link_0'>
         <inertial>
@@ -1297,6 +1318,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>7.80269 -13.5308 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -1402,6 +1425,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>7.9422 -13.5158 0.044642 0 -0 1.62929</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -1507,6 +1532,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>8.08556 -13.4969 0.044642 0 -0 1.68163</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -1612,6 +1639,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>8.22455 -13.4732 0.044642 0 -0 1.71814</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -1717,6 +1746,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>8.36241 -13.4393 0.044642 0 -0 1.77492</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -1822,6 +1853,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>8.50005 -13.3999 0.044642 0 -0 1.82339</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -1927,6 +1960,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>8.63591 -13.3537 0.044642 0 -0 1.87376</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -2032,6 +2067,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>8.77029 -13.3001 0.044642 0 -0 1.93725</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -2137,6 +2174,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>8.90142 -13.2397 0.044642 0 -0 1.98791</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -2242,6 +2281,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.03025 -13.1748 0.044642 0 -0 2.02995</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -2347,6 +2388,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.15316 -13.1034 0.044642 0 -0 2.05697</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -2452,6 +2495,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.27531 -13.0273 0.044642 0 -0 2.12953</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -2557,6 +2602,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.39107 -12.9448 0.044642 0 -0 2.16994</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -2662,6 +2709,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.50155 -12.8579 0.044642 0 -0 2.20818</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -2767,6 +2816,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.61363 -12.761 0.044642 0 -0 2.27891</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -2872,6 +2923,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.71749 -12.661 0.044642 0 -0 2.31423</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_0'>
       <link name='separator_link_0'>
         <inertial>
@@ -2977,6 +3030,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>6.24779 -13.5307 0.044642 0 -0 1.57324</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -3082,6 +3137,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.81521 -12.5562 0.044642 0 -0 2.39177</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -3187,6 +3244,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.9129 -12.4464 0.044642 0 -0 2.39177</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -3292,11 +3351,13 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.0031 -12.3324 0.044642 0 -0 2.43888</pose>
     </model>
+    -->
     <state world_name='bfmc_official'>
       <sim_time>3298 615000000</sim_time>
       <real_time>3589 836139332</real_time>
       <wall_time>1612351022 602891391</wall_time>
       <iterations>3298615</iterations>
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone'>
         <pose>6.38806 -13.5317 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3307,6 +3368,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone'>
         <pose>6.52931 -13.5311 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3317,6 +3380,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_0'>
         <pose>6.24779 -13.5307 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3327,6 +3392,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone'>
         <pose>6.67069 -13.5307 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3337,6 +3404,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone'>
         <pose>6.81255 -13.5305 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3347,6 +3416,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone'>
         <pose>6.95349 -13.5302 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3357,6 +3428,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone'>
         <pose>7.09476 -13.5299 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3367,6 +3440,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone'>
         <pose>7.23664 -13.5303 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3377,6 +3452,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>7.37782 -13.5302 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3387,6 +3464,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_0'>
         <pose>7.51909 -13.5303 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3397,6 +3476,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_1'>
         <pose>7.66047 -13.5302 0.044642 0 -0 1.57324</pose>
         <scale>1 1 1</scale>
@@ -3407,6 +3488,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2'>
         <pose>7.80241 -13.5261 0.044642 0 -0 1.62929</pose>
         <scale>1 1 1</scale>
@@ -3417,6 +3500,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone'>
         <pose>7.94451 -13.5142 0.044642 0 -0 1.68163</pose>
         <scale>1 1 1</scale>
@@ -3427,6 +3512,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone'>
         <pose>8.0853 -13.4952 0.044642 0 -0 1.71814</pose>
         <scale>1 1 1</scale>
@@ -3437,6 +3524,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone'>
         <pose>8.22385 -13.4698 0.044642 0 -0 1.77492</pose>
         <scale>1 1 1</scale>
@@ -3447,6 +3536,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone'>
         <pose>8.36199 -13.4377 0.044642 0 -0 1.82339</pose>
         <scale>1 1 1</scale>
@@ -3457,6 +3548,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone'>
         <pose>8.49966 -13.3986 0.044642 0 -0 1.87376</pose>
         <scale>1 1 1</scale>
@@ -3467,6 +3560,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone'>
         <pose>8.63562 -13.3529 0.044642 0 -0 1.93725</pose>
         <scale>1 1 1</scale>
@@ -3477,6 +3572,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone'>
         <pose>8.76947 -13.2983 0.044642 0 -0 1.98791</pose>
         <scale>1 1 1</scale>
@@ -3487,6 +3584,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>8.90079 -13.2384 0.044642 0 -0 2.02995</pose>
         <scale>1 1 1</scale>
@@ -3497,6 +3596,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.03025 -13.1748 0.044642 0 -0 2.05697</pose>
         <scale>1 1 1</scale>
@@ -3507,6 +3608,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.15316 -13.1034 0.044642 0 -0 2.12953</pose>
         <scale>1 1 1</scale>
@@ -3517,6 +3620,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.27531 -13.0273 0.044642 0 -0 2.16994</pose>
         <scale>1 1 1</scale>
@@ -3527,6 +3632,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.39107 -12.9448 0.044642 0 -0 2.20818</pose>
         <scale>1 1 1</scale>
@@ -3537,6 +3644,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.50524 -12.8547 0.044642 0 -0 2.27891</pose>
         <scale>1 1 1</scale>
@@ -3547,6 +3656,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.61363 -12.761 0.044642 0 -0 2.31423</pose>
         <scale>1 1 1</scale>
@@ -3557,6 +3668,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.71749 -12.661 0.044642 0 -0 2.39177</pose>
         <scale>1 1 1</scale>
@@ -3567,6 +3680,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.81521 -12.5562 0.044642 0 -0 2.39177</pose>
         <scale>1 1 1</scale>
@@ -3577,6 +3692,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.9129 -12.4464 0.044642 0 -0 2.43888</pose>
         <scale>1 1 1</scale>
@@ -3587,6 +3704,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.0031 -12.3324 0.044642 0 -0 2.50868</pose>
         <scale>1 1 1</scale>
@@ -3597,6 +3716,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.0861 -12.2144 0.044642 0 -0 2.54929</pose>
         <scale>1 1 1</scale>
@@ -3607,6 +3728,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.1623 -12.0917 0.044642 0 -0 2.59981</pose>
         <scale>1 1 1</scale>
@@ -3617,6 +3740,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.2314 -11.9673 0.044642 0 -0 2.65247</pose>
         <scale>1 1 1</scale>
@@ -3627,6 +3752,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.294 -11.8407 0.044642 0 -0 2.72834</pose>
         <scale>1 1 1</scale>
@@ -3637,6 +3764,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.3501 -11.7095 0.044642 0 -0 2.72834</pose>
         <scale>1 1 1</scale>
@@ -3647,6 +3776,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.4015 -11.5772 0.044642 0 -0 2.77348</pose>
         <scale>1 1 1</scale>
@@ -3657,6 +3788,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.4472 -11.4419 0.044642 0 -0 2.83585</pose>
         <scale>1 1 1</scale>
@@ -3667,6 +3800,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.4863 -11.3058 0.044642 0 -0 2.90525</pose>
         <scale>1 1 1</scale>
@@ -3677,6 +3812,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.5166 -11.1677 0.044642 0 -0 2.94946</pose>
         <scale>1 1 1</scale>
@@ -3687,6 +3824,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.5399 -11.0283 0.044642 0 -0 2.99042</pose>
         <scale>1 1 1</scale>
@@ -3697,6 +3836,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.5605 -10.8885 0.044642 0 -0 3.04562</pose>
         <scale>1 1 1</scale>
@@ -3707,6 +3848,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.5708 -10.7475 0.044642 0 -0 3.07687</pose>
         <scale>1 1 1</scale>
@@ -3717,6 +3860,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.5738 -10.606 0.044642 0 -0 -3.12201</pose>
         <scale>1 1 1</scale>
@@ -3727,6 +3872,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.5712 -10.4602 0.044642 0 0 -3.12201</pose>
         <scale>1 1 1</scale>
@@ -3737,6 +3884,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.5638 -10.3195 0.044642 0 0 -3.04003</pose>
         <scale>1 1 1</scale>
@@ -3747,6 +3896,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.5489 -10.1779 0.044642 0 0 -3.0227</pose>
         <scale>1 1 1</scale>
@@ -3757,6 +3908,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.5276 -10.0389 0.044642 0 0 -2.9299</pose>
         <scale>1 1 1</scale>
@@ -3767,6 +3920,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.4963 -9.9013 0.044642 0 0 -2.91058</pose>
         <scale>1 1 1</scale>
@@ -3777,6 +3932,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.4607 -9.76405 0.044642 0 0 -2.84827</pose>
         <scale>1 1 1</scale>
@@ -3787,6 +3944,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.4157 -9.62846 0.044642 0 0 -2.80879</pose>
         <scale>1 1 1</scale>
@@ -3797,6 +3956,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.3677 -9.49477 0.044642 0 0 -2.77073</pose>
         <scale>1 1 1</scale>
@@ -3807,6 +3968,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.3152 -9.3641 0.044642 0 0 -2.77073</pose>
         <scale>1 1 1</scale>
@@ -3817,6 +3980,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>10.2649 -9.23213 0.044642 0 0 -2.77073</pose>
         <scale>1 1 1</scale>
@@ -3827,6 +3992,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0'>
         <pose>10.2153 -9.10039 0.044642 0 0 -2.79345</pose>
         <scale>1 1 1</scale>
@@ -3837,6 +4004,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone'>
         <pose>10.171 -8.96571 0.044642 0 0 -2.84896</pose>
         <scale>1 1 1</scale>
@@ -3847,6 +4016,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone'>
         <pose>10.1303 -8.82861 0.044642 0 0 -2.84896</pose>
         <scale>1 1 1</scale>
@@ -3857,6 +4028,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone'>
         <pose>10.0918 -8.69257 0.044642 0 0 -2.8586</pose>
         <scale>1 1 1</scale>
@@ -3867,6 +4040,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone'>
         <pose>10.0544 -8.55568 0.044642 0 0 -2.89929</pose>
         <scale>1 1 1</scale>
@@ -3877,6 +4052,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone'>
         <pose>10.0232 -8.41831 0.044642 0 0 -2.91386</pose>
         <scale>1 1 1</scale>
@@ -3887,6 +4064,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone'>
         <pose>9.99442 -8.28076 0.044642 0 0 -2.94815</pose>
         <scale>1 1 1</scale>
@@ -3897,6 +4076,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.96917 -8.14094 0.044642 0 0 -2.96699</pose>
         <scale>1 1 1</scale>
@@ -3907,6 +4088,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.9463 -8.00186 0.044642 0 0 -2.99357</pose>
         <scale>1 1 1</scale>
@@ -3917,6 +4100,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0'>
         <pose>9.92639 -7.86181 0.044642 0 0 -3.00797</pose>
         <scale>1 1 1</scale>
@@ -3927,6 +4112,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone'>
         <pose>9.90967 -7.71945 0.044642 0 0 -3.04653</pose>
         <scale>1 1 1</scale>
@@ -3937,6 +4124,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone'>
         <pose>9.89736 -7.57708 0.044642 0 0 -3.06323</pose>
         <scale>1 1 1</scale>
@@ -3947,6 +4136,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone'>
         <pose>9.8882 -7.43587 0.044642 0 0 -3.06323</pose>
         <scale>1 1 1</scale>
@@ -3957,6 +4148,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone'>
         <pose>9.87969 -7.29504 0.044642 0 0 -3.08647</pose>
         <scale>1 1 1</scale>
@@ -3967,6 +4160,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone'>
         <pose>9.87484 -7.15388 0.044642 0 0 -3.11218</pose>
         <scale>1 1 1</scale>
@@ -3977,6 +4172,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone'>
         <pose>9.87432 -7.01094 0.044642 0 0 -3.12953</pose>
         <scale>1 1 1</scale>
@@ -3987,6 +4184,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone'>
         <pose>9.87416 -6.86918 0.044642 0 0 -3.12953</pose>
         <scale>1 1 1</scale>
@@ -3997,6 +4196,8 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
+    <!-- SEPARATOR DISABLED
       <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_0'>
         <pose>9.87395 -6.72628 0.044642 0 0 -3.12953</pose>
         <scale>1 1 1</scale>
@@ -4007,6 +4208,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+    -->
       <model name='track'>
         <pose>7.34 -7.495 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -4030,6 +4232,7 @@
         <pose>15 -15 2 0 -0 0</pose>
       </light>
     </state>
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -4135,6 +4338,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.0868 -12.2134 0.044642 0 -0 2.50868</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -4240,6 +4445,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.1637 -12.0925 0.044642 0 -0 2.54929</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -4345,6 +4552,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.2342 -11.9688 0.044642 0 -0 2.59981</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -4450,6 +4659,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.2986 -11.8427 0.044642 0 -0 2.63896</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -4555,6 +4766,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.3516 -11.7102 0.044642 0 -0 2.72834</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -4660,6 +4873,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.4054 -11.5787 0.044642 0 -0 2.72834</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -4765,6 +4980,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.4512 -11.4432 0.044642 0 -0 2.77348</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -4870,6 +5087,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.4863 -11.3058 0.044642 0 -0 2.83585</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -4975,6 +5194,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.5188 -11.1681 0.044642 0 -0 2.90525</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -5080,6 +5301,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.5399 -11.0283 0.044642 0 -0 2.94946</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -5185,6 +5408,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.5605 -10.8885 0.044642 0 -0 2.99042</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -5290,6 +5515,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.5708 -10.7475 0.044642 0 -0 3.04562</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -5395,6 +5622,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.5793 -10.6057 0.044642 0 -0 3.07687</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -5500,6 +5729,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.5712 -10.4602 0.044642 0 -0 -3.12201</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -5605,6 +5836,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.5655 -10.3193 0.044642 0 0 -3.12201</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -5710,6 +5943,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.5489 -10.1779 0.044642 0 0 -3.04003</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -5815,6 +6050,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.5276 -10.0389 0.044642 0 0 -3.0227</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -5920,6 +6157,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.4963 -9.9013 0.044642 0 0 -2.9299</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -6025,6 +6264,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.4607 -9.76405 0.044642 0 0 -2.91058</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -6130,6 +6371,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.4157 -9.62846 0.044642 0 0 -2.84827</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -6235,6 +6478,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.3677 -9.49477 0.044642 0 0 -2.80879</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -6340,6 +6585,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.3152 -9.3641 0.044642 0 0 -2.77073</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -6445,6 +6692,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.2649 -9.23213 0.044642 0 0 -2.77073</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0'>
       <link name='separator_link_0'>
         <inertial>
@@ -6550,6 +6799,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.2153 -9.10039 0.044642 0 0 -2.77073</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -6655,6 +6906,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.1689 -8.96635 0.044642 0 0 -2.79345</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -6760,6 +7013,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.1303 -8.82861 0.044642 0 0 -2.84896</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -6865,6 +7120,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.0918 -8.69257 0.044642 0 0 -2.84896</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -6970,6 +7227,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.0544 -8.55568 0.044642 0 0 -2.8586</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -7075,6 +7334,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>10.0232 -8.41831 0.044642 0 0 -2.89929</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -7180,6 +7441,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.99442 -8.28076 0.044642 0 0 -2.91386</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -7285,6 +7548,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.96917 -8.14094 0.044642 0 0 -2.94815</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -7390,6 +7655,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.9463 -8.00186 0.044642 0 0 -2.96699</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0'>
       <link name='separator_link_0'>
         <inertial>
@@ -7495,6 +7762,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.92639 -7.86181 0.044642 0 0 -2.96699</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -7600,6 +7869,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.90967 -7.71945 0.044642 0 0 -3.00797</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -7705,6 +7976,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.89736 -7.57708 0.044642 0 0 -3.04653</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -7810,6 +8083,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.8882 -7.43587 0.044642 0 0 -3.06323</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -7915,6 +8190,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.87969 -7.29504 0.044642 0 0 -3.06323</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -8020,6 +8297,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.87484 -7.15388 0.044642 0 0 -3.08647</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -8125,6 +8404,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.87432 -7.01094 0.044642 0 0 -3.11218</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone'>
       <link name='separator_link_0'>
         <inertial>
@@ -8230,6 +8511,8 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.87416 -6.86918 0.044642 0 0 -3.12953</pose>
     </model>
+    -->
+    <!-- SEPARATOR DISABLED
     <model name='separator_clone_clone_clone_clone_clone_clone_clone_clone_2_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_clone_0_clone_clone_clone_clone_clone_clone_clone_0'>
       <link name='separator_link_0'>
         <inertial>
@@ -8335,6 +8618,7 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>9.87395 -6.72628 0.044642 0 0 -3.12953</pose>
     </model>
+    -->
     <gui fullscreen='0'>
       <camera name='user_camera'>
         <pose>1.37037 -20.0726 2.74517 0 0.319643 1.1482</pose>
