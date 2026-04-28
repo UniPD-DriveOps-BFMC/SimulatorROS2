@@ -13,14 +13,14 @@
   <library_effects>
     <effect id="Material_001-effect">
       <profile_COMMON>
-        <newparam sid="interzis_texture_png-surface">
+        <newparam sid="notallowed_sign.png-surface">
           <surface type="2D">
-            <init_from>interzis_texture_png</init_from>
+            <init_from>notallowed_sign.png</init_from>
           </surface>
         </newparam>
-        <newparam sid="interzis_texture_png-sampler">
+        <newparam sid="notallowed_sign.png-sampler">
           <sampler2D>
-            <source>interzis_texture_png-surface</source>
+            <source>notallowed_sign.png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="interzis_texture_png-sampler" texcoord="UVMap"/>
+              <texture texture="notallowed_sign.png-sampler" texcoord="UVMap"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -40,8 +40,8 @@
     </effect>
   </library_effects>
   <library_images>
-    <image id="interzis_texture_png" name="interzis_texture_png">
-      <init_from>interzis_texture.png</init_from>
+    <image id="notallowed_sign.png" name="notallowed_sign.png">
+      <init_from>notallowed_sign.png</init_from>
     </image>
   </library_images>
   <library_materials>

@@ -19,6 +19,13 @@ namespace trafficLight
         auto nameComp = _ecm.Component<gz::sim::components::Name>(_entity);
         this->name = nameComp ? nameComp->Data() : "unknown";
 
+        if (!rclcpp::ok())
+        {
+            int argc = 0;
+            char** argv = nullptr;
+            rclcpp::init(argc, argv);
+        }
+
         rclcpp::NodeOptions node_options;
         node_options.arguments({"--ros-args", "-r", "__node:=traffic_light_plugin_node_" + this->name});
         this->m_ros_node = std::make_shared<rclcpp::Node>("traffic_light_plugin_" + this->name, node_options);
@@ -40,15 +47,10 @@ namespace trafficLight
             1, 
             std::bind(&TrafficLight::OnRosMsg, this, std::placeholders::_1));
 
-        if(DEBUG)
-        {
-            auto logger = this->m_ros_node->get_logger();
-            std::cerr << "\n\n";
-            RCLCPP_INFO_STREAM(logger, "====================================================================");
-            RCLCPP_INFO_STREAM(logger, "[traffic_light_plugin] attached to: " << this->name);
-            RCLCPP_INFO_STREAM(logger, "[traffic_light_plugin] listen to: /automobile/trafficlight/" << this->name);
-            RCLCPP_INFO_STREAM(logger, "====================================================================");
-        }
+        std::cerr << "\n====================================================================\n";
+        std::cerr << "[traffic_light_plugin] attached to: " << this->name << "\n";
+        std::cerr << "[traffic_light_plugin] listening to: /automobile/trafficlight/" << this->name << "\n";
+        std::cerr << "====================================================================\n\n";
     }
 
     void TrafficLight::SetLightState(gz::sim::EntityComponentManager &_ecm, 

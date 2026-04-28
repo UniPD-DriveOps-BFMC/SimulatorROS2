@@ -41,7 +41,7 @@
   </library_effects>
   <library_images>
     <image id="parkingSign_png_001" name="parkingSign_png_001">
-      <init_from>parkingSign.png.001.png</init_from>
+      <init_from>parking_sign.png</init_from>
     </image>
   </library_images>
   <library_materials>

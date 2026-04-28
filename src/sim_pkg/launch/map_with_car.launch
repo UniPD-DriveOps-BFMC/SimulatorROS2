@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Complete Simulator Launch Configuration
-  
   This is the main launch file for running the complete BFMC simulator with:
   - Gazebo Sim with the full world (track, signs, traffic lights, etc.)
   - RC car model spawned in the world
   - ROS 2 <-> Gazebo Transport bridges for all topics
-  
-  This launch file combines three sub-launchers:
-  1. gazebo.launch - Starts Gazebo simulator with the world
-  2. car.launch - Spawns the car model in the simulation
-  3. bridge.launch - Sets up topic bridges for ROS 2 communication
-  
-  Usage:
-    ros2 launch sim_pkg map_with_car.launch
-  
-  After launching, use the control interface:
-    ros2 run example tl_talker
+  - OAK-D mono converter (RGB -> grayscale)
+  - OAK-D PointCloud2 generator (depth + RGB -> XYZRGB cloud)
 -->
- 
 <launch>
   <include file="$(find-pkg-share sim_pkg)/launch/gazebo.launch"/>
   <include file="$(find-pkg-share sim_pkg)/launch/sublaunchers/car.launch"/>
   <include file="$(find-pkg-share sim_pkg)/launch/bridge.launch"/>
+  <include file="$(find-pkg-share sim_pkg)/launch/sublaunchers/pointcloud.launch"/>
+
+  <!-- OAK-D mono converter: /oak/left|right/image_raw -> image_mono -->
+  <node pkg="oak_mono_converter" exec="mono_converter" name="oak_mono_converter"/>
 </launch>

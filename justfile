@@ -69,3 +69,12 @@ run:
     echo "Starting control interface..."
     echo "Use W/A/S/D to drive, ESC to exit"
     bash -c "source ../install/setup.bash && ros2 run example control"
+
+# Launch simulator with all objects but without heavy CV nodes (saves RAM)
+all-objects-light:
+    #! /bin/sh
+    trap "trap - TERM && kill -- -$$" INT TERM EXIT
+    bash -c "source ../install/setup.bash && ros2 launch sim_pkg map_with_car_light.launch gui:=true" &
+    sleep 15
+    bash -c "source ../install/setup.bash && ros2 launch sim_pkg all_objects.launch" &
+    wait

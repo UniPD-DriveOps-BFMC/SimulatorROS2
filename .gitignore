@@ -8,3 +8,5 @@ src/CMakeLists.txt
 **/*.pyc
 
 .vscode/
+*.bak
+*.bak2

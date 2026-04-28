@@ -68,7 +68,7 @@
   </library_effects>
   <library_images>
     <image id="a" name="a">
-      <init_from>a.png</init_from>
+      <init_from>roadblock.png</init_from>
     </image>
   </library_images>
   <library_materials>

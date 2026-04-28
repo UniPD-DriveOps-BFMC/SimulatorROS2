@@ -13,14 +13,14 @@
   <library_effects>
     <effect id="Material_001-effect">
       <profile_COMMON>
-        <newparam sid="roundabout_texture_png-surface">
+        <newparam sid="roundabout_sign.png-surface">
           <surface type="2D">
-            <init_from>roundabout_texture_png</init_from>
+            <init_from>roundabout_sign.png</init_from>
           </surface>
         </newparam>
-        <newparam sid="roundabout_texture_png-sampler">
+        <newparam sid="roundabout_sign.png-sampler">
           <sampler2D>
-            <source>roundabout_texture_png-surface</source>
+            <source>roundabout_sign.png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="roundabout_texture_png-sampler" texcoord="UVMap"/>
+              <texture texture="roundabout_sign.png-sampler" texcoord="UVMap"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -40,8 +40,8 @@
     </effect>
   </library_effects>
   <library_images>
-    <image id="roundabout_texture_png" name="roundabout_texture_png">
-      <init_from>roundabout_texture.png</init_from>
+    <image id="roundabout_sign.png" name="roundabout_sign.png">
+      <init_from>roundabout_sign.png</init_from>
     </image>
   </library_images>
   <library_materials>

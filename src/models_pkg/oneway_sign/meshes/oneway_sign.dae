@@ -41,7 +41,7 @@
   </library_effects>
   <library_images>
     <image id="oneway_png" name="oneway_png">
-      <init_from>oneway.png</init_from>
+      <init_from>oneway_sign.png</init_from>
     </image>
   </library_images>
   <library_materials>

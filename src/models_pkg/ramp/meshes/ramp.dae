@@ -13,14 +13,14 @@
   <library_effects>
     <effect id="Material_001-effect">
       <profile_COMMON>
-        <newparam sid="rampa_png-surface">
+        <newparam sid="ramp.png-surface">
           <surface type="2D">
-            <init_from>rampa_png</init_from>
+            <init_from>ramp.png</init_from>
           </surface>
         </newparam>
-        <newparam sid="rampa_png-sampler">
+        <newparam sid="ramp.png-sampler">
           <sampler2D>
-            <source>rampa_png-surface</source>
+            <source>ramp.png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="rampa_png-sampler" texcoord="UVMap"/>
+              <texture texture="ramp.png-sampler" texcoord="UVMap"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -40,8 +40,8 @@
     </effect>
   </library_effects>
   <library_images>
-    <image id="rampa_png" name="rampa_png">
-      <init_from>rampa.png</init_from>
+    <image id="ramp.png" name="ramp.png">
+      <init_from>ramp.png</init_from>
     </image>
   </library_images>
   <library_materials>

@@ -28,23 +28,14 @@
           </mesh>
         </geometry>
         <material>
-          <lighting>1</lighting>
-          <ambient>1 1 1 1 </ambient>
-          <diffuse>1 1 1 1 </diffuse>
-          <specular>0 0 0 0</specular>
-          <emissive>1 1 1 1 </emissive>
-          <script>
-            <uri>model://ramp/materials/scripts</uri>
-            <uri>model://ramp/materials/textures</uri>
-            <name>RAMP</name>
-          </script>
-          <shader type='vertex'>
-            <normal_map>__default__</normal_map>
-          </shader>
-          <ambient>0.3 0.3 0.3 1</ambient>
-          <diffuse>0.7 0.7 0.7 1</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
-          <emissive>0 0 0 1</emissive>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://ramp/meshes/ramp.png</albedo_map>
+            </metal>
+          </pbr>
         </material>
         <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>

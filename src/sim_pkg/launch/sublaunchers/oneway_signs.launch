@@ -5,19 +5,19 @@
   <!-- ONE WAY SIGNS -->
   <node
       name  = "ONEWAY_J"
-      pkg   = "gazebo_ros"
+      pkg   = "ros_gz_sim"
       exec = "create"
       args  = "-file $(find-pkg-share models_pkg)/oneway_sign/model.sdf -name ONEWAY_J -x 3.341 -y -9.821 -z 0.078998 -R 0 -P 0 -Y 1.570796"/>
 
   <node
       name  = "ONEWAY_B"
-      pkg   = "gazebo_ros"
+      pkg   = "ros_gz_sim"
       exec = "create"
       args  = "-file $(find-pkg-share models_pkg)/oneway_sign/model.sdf -name ONEWAY_B -x 2.406 -y -9.821 -z 0.078998 -R 0 -P 0 -Y 1.570796"/>
   
   <node
       name  = "ONEWAY_E"
-      pkg   = "gazebo_ros"
+      pkg   = "ros_gz_sim"
       exec = "create"
       args  = "-file $(find-pkg-share models_pkg)/oneway_sign/model.sdf -name ONEWAY_E -x 9.196 -y -14.375 -z 0.078998 -R 0 -P 0 -Y 0"/>
 

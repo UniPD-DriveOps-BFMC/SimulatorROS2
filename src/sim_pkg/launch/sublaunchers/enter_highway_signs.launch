@@ -5,13 +5,13 @@
   <!-- ENTER HIGHWAY SIGNS -->
   <node
       name  = "EHIGH_T"
-      pkg   = "gazebo_ros"
+      pkg   = "ros_gz_sim"
       exec = "create"
       args  = "-file $(find-pkg-share models_pkg)/enter_highway_sign/model.sdf -name EHIGH_T -x 5.871 -y -13.970 -z 0.078998 -R 0  -P 0  -Y 3.141592"/>
 
   <node
       name  = "EHIGH_Y"
-      pkg   = "gazebo_ros"
+      pkg   = "ros_gz_sim"
       exec = "create"
       args  = "-file $(find-pkg-share models_pkg)/enter_highway_sign/model.sdf -name EHIGH_Y -x 9.412 -y -4.850 -z 0.078998 -R 0  -P 0  -Y 1.570796"/>
 
