@@ -43,10 +43,11 @@
     </include>
     
     <!-- including the camera link -->
-    <!-- 0.261799388 -->
+    <!-- URDF chain: base_link(rear axle) -> camera_mount (0.18853,0.0025,0.097083 p=0.38397) -> camera_base (+0.02940,0,+0.09646) -->
+    <!-- SDF x = URDF_x - 0.152  (rear axle sits at x=-0.152 in SDF model frame) -->
     <include>
       <uri>model://camera</uri>
-      <pose>0 0 0.2 0 0.2617 0</pose>
+      <pose>0.09993 0.0025 0.17551 0 0.38397 0</pose>
       <name>camera</name>
     </include>
 
@@ -391,6 +392,15 @@
     <plugin name='bno055::BNO055' filename='libbno055_plugin.so'> </plugin>
     <plugin name='gps::GPS' filename='libgps_plugin.so'> </plugin>
 
+    <!-- Encoder odometry from wheel joint velocities -->
+    <plugin filename="gz-sim-odometry-publisher-system"
+            name="gz::sim::systems::OdometryPublisher">
+      <odom_topic>/encoder_odom</odom_topic>
+      <odom_frame>odom</odom_frame>
+      <robot_base_frame>automobile</robot_base_frame>
+      <update_frequency>50</update_frequency>
+      <publish_tf>false</publish_tf>
+    </plugin>
 
   </model>
 </sdf>

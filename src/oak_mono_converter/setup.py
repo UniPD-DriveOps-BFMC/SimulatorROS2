@@ -19,7 +19,9 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'mono_converter = oak_mono_converter.mono_converter_node:main',
+            'mono_converter     = oak_mono_converter.mono_converter_node:main',
+            'gps_converter      = oak_mono_converter.gps_converter_node:main',
+            'sensor_converter   = oak_mono_converter.sensor_converter_node:main',
         ],
     },
 )

@@ -94,6 +94,28 @@
           </contact>
         </surface>
       </collision>
-    </link>   
+
+      <!-- BNO055-equivalent IMU: orientation + angular velocity + linear acceleration -->
+      <!-- URDF: base_link_to_imu_joint xyz="0.11 0 0.0145"  →  SDF x = 0.11 - 0.152 = -0.042 -->
+      <sensor name="automobile_imu" type="imu">
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <topic>/automobile/imu/data</topic>
+        <pose>-0.042 0 0.0145 0 0 0</pose>
+        <imu>
+          <angular_velocity>
+            <x><noise type="gaussian"><mean>0.0</mean><stddev>0.002</stddev></noise></x>
+            <y><noise type="gaussian"><mean>0.0</mean><stddev>0.002</stddev></noise></y>
+            <z><noise type="gaussian"><mean>0.0</mean><stddev>0.002</stddev></noise></z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x><noise type="gaussian"><mean>0.0</mean><stddev>0.05</stddev></noise></x>
+            <y><noise type="gaussian"><mean>0.0</mean><stddev>0.05</stddev></noise></y>
+            <z><noise type="gaussian"><mean>0.0</mean><stddev>0.05</stddev></noise></z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
+
+    </link>
   </model>
 </sdf>

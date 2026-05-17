@@ -130,6 +130,25 @@
         <topic>/oak/right/image_raw</topic>
       </sensor>
 
+      <!-- ===== OAK-D Built-in IMU (BNO085: accel + gyro + orientation) ===== -->
+      <sensor name="oak_imu" type="imu">
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <topic>/oak/imu/data</topic>
+        <imu>
+          <angular_velocity>
+            <x><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></x>
+            <y><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></y>
+            <z><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x><noise type="gaussian"><mean>0.0</mean><stddev>0.03</stddev></noise></x>
+            <y><noise type="gaussian"><mean>0.0</mean><stddev>0.03</stddev></noise></y>
+            <z><noise type="gaussian"><mean>0.0</mean><stddev>0.03</stddev></noise></z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
+
     </link>
   </model>
 </sdf>

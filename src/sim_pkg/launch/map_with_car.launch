@@ -14,6 +14,9 @@
   <include file="$(find-pkg-share sim_pkg)/launch/bridge.launch"/>
   <include file="$(find-pkg-share sim_pkg)/launch/sublaunchers/pointcloud.launch"/>
 
-  <!-- OAK-D mono converter: /oak/left|right/image_raw -> image_mono -->
+  <!-- OAK-D mono converter: image_raw -> image_mono, image_rect, camera_info relay -->
   <node pkg="oak_mono_converter" exec="mono_converter" name="oak_mono_converter"/>
+
+  <!-- Sensor converter: encoder speed/distance + GPS 1 s delay -> GpsTagPose -->
+  <node pkg="oak_mono_converter" exec="sensor_converter" name="sensor_converter"/>
 </launch>

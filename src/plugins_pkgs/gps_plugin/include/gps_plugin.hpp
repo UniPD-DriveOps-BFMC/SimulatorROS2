@@ -43,7 +43,7 @@ namespace gps
         gz::sim::Model model;  ///< Model interface for pose access
         gz::transport::Node node;  ///< Gazebo Transport node
         gz::transport::Node::Publisher gpsPub;  ///< Publisher for GPS data
-        std::string topicName{"/automobile/localisation"};  ///< Topic for GPS data
+        std::string topicName{"/automobile/localisation_raw"};  ///< Raw GPS topic (bridge to ROS2; sensor_converter adds 1 s delay and republishes as GpsTagPose)
         std::chrono::steady_clock::duration update_period{std::chrono::milliseconds(250)};  ///< Update period (250ms = 4Hz)
         std::chrono::steady_clock::duration last_update_time{0};  ///< Last update time
 

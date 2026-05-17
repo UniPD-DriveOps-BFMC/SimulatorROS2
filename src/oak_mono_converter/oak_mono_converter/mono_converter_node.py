@@ -2,7 +2,7 @@
 
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import Image, CameraInfo
 import numpy as np
 
 
@@ -36,10 +36,36 @@ class MonoConverterNode(Node):
         self.pub_depth = self.create_publisher(
             Image, '/oak/stereo/image_fixed', 10)
 
+        # --- RGB image_rect (passthrough, no distortion in sim) ---
+        self.sub_rgb = self.create_subscription(
+            Image, '/oak/rgb/image_raw', self.callback_rgb_rect, 10)
+        self.pub_rgb_rect = self.create_publisher(
+            Image, '/oak/rgb/image_rect', 10)
+
+        # --- Camera info relays (bridge publishes to *_gz, node fixes frame_id) ---
+        self.sub_rgb_info = self.create_subscription(
+            CameraInfo, '/oak/rgb/camera_info_gz', self.callback_rgb_info, 10)
+        self.pub_rgb_info = self.create_publisher(
+            CameraInfo, '/oak/rgb/camera_info', 10)
+
+        self.sub_left_info = self.create_subscription(
+            CameraInfo, '/oak/left/camera_info_gz', self.callback_left_info, 10)
+        self.pub_left_info = self.create_publisher(
+            CameraInfo, '/oak/left/camera_info', 10)
+
+        self.sub_right_info = self.create_subscription(
+            CameraInfo, '/oak/right/camera_info_gz', self.callback_right_info, 10)
+        self.pub_right_info = self.create_publisher(
+            CameraInfo, '/oak/right/camera_info', 10)
+
         self.get_logger().info('OAK-D Mono Converter + Depth Fix avviato.')
-        self.get_logger().info('  /oak/left/image_raw    -> /oak/left/image_mono')
-        self.get_logger().info('  /oak/right/image_raw   -> /oak/right/image_mono')
-        self.get_logger().info('  /oak/stereo/image_raw  -> /oak/stereo/image_fixed (frame_id corretto)')
+        self.get_logger().info('  /oak/left/image_raw       -> /oak/left/image_mono')
+        self.get_logger().info('  /oak/right/image_raw      -> /oak/right/image_mono')
+        self.get_logger().info('  /oak/stereo/image_raw     -> /oak/stereo/image_fixed (frame_id corretto)')
+        self.get_logger().info('  /oak/rgb/image_raw        -> /oak/rgb/image_rect')
+        self.get_logger().info('  /oak/rgb/camera_info_gz   -> /oak/rgb/camera_info')
+        self.get_logger().info('  /oak/left/camera_info_gz  -> /oak/left/camera_info')
+        self.get_logger().info('  /oak/right/camera_info_gz -> /oak/right/camera_info')
 
     def rgb_to_mono(self, msg: Image) -> Image:
         """
@@ -83,6 +109,38 @@ class MonoConverterNode(Node):
         fixed.step = msg.step
         fixed.data = msg.data
         self.pub_depth.publish(fixed)
+
+    def callback_rgb_rect(self, msg: Image):
+        """Relay rgb image_raw as image_rect (no distortion in simulation)."""
+        self.pub_rgb_rect.publish(msg)
+
+    def _relay_camera_info(self, msg: CameraInfo, frame_id: str) -> CameraInfo:
+        out = CameraInfo()
+        out.header = msg.header
+        out.header.frame_id = frame_id
+        out.height = msg.height
+        out.width = msg.width
+        out.distortion_model = msg.distortion_model
+        out.d = msg.d
+        out.k = msg.k
+        out.r = msg.r
+        out.p = msg.p
+        out.binning_x = msg.binning_x
+        out.binning_y = msg.binning_y
+        out.roi = msg.roi
+        return out
+
+    def callback_rgb_info(self, msg: CameraInfo):
+        self.pub_rgb_info.publish(
+            self._relay_camera_info(msg, 'automobile/camera/link_camera/oak_rgb'))
+
+    def callback_left_info(self, msg: CameraInfo):
+        self.pub_left_info.publish(
+            self._relay_camera_info(msg, 'automobile/camera/link_camera/oak_left'))
+
+    def callback_right_info(self, msg: CameraInfo):
+        self.pub_right_info.publish(
+            self._relay_camera_info(msg, 'automobile/camera/link_camera/oak_right'))
 
     def main(args=None):
         rclpy.init(args=args)

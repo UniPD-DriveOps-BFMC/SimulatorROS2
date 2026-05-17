@@ -1,6 +1,7 @@
 
 #include "gps_plugin.hpp"
 #include <gz/sim/components/Pose.hh>
+#include <gz/math/Vector3.hh>
 #include <cstdlib>
 #include <ctime>
 #include <gz/sim/components/Name.hh>
@@ -52,16 +53,21 @@ namespace gps
             return;
             
         auto pose = poseComp->Data();
-        
-        // Add noise to position (simulate GPS sensor error)
-        float noise_x = (std::rand() / (float)RAND_MAX) * 0.2f - 0.1f;
-        float noise_y = (std::rand() / (float)RAND_MAX) * 0.2f - 0.1f;
-        
+
+        // GPS antenna offset from SDF model origin (URDF xyz="0.075 0 0.102" from rear axle; SDF x = 0.075 - 0.152 = -0.077)
+        // Rotate the local offset into world frame using the car's current orientation
+        gz::math::Vector3d antennaLocal(-0.077, 0.0, 0.102);
+        gz::math::Vector3d antennaWorld = pose.Rot().RotateVector(antennaLocal);
+
+        // Add ±15 cm uniform random noise to simulate GPS sensor error
+        float noise_x = (std::rand() / (float)RAND_MAX) * 0.30f - 0.15f;
+        float noise_y = (std::rand() / (float)RAND_MAX) * 0.30f - 0.15f;
+
         // Create GPS message with pose and noise
         gz::msgs::Pose gpsMsg;
-        gpsMsg.mutable_position()->set_x(pose.Pos().X() + noise_x);
-        gpsMsg.mutable_position()->set_y(std::abs(pose.Pos().Y()) + noise_y);
-        gpsMsg.mutable_position()->set_z(pose.Pos().Z());
+        gpsMsg.mutable_position()->set_x(pose.Pos().X() + antennaWorld.X() + noise_x);
+        gpsMsg.mutable_position()->set_y(std::abs(pose.Pos().Y() + antennaWorld.Y()) + noise_y);
+        gpsMsg.mutable_position()->set_z(pose.Pos().Z() + antennaWorld.Z());
         
         gpsMsg.mutable_orientation()->set_x(pose.Rot().X());
         gpsMsg.mutable_orientation()->set_y(pose.Rot().Y());

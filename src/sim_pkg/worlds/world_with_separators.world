@@ -12,6 +12,8 @@
       <render_engine>ogre</render_engine>
     </plugin>
 
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
+
     <gravity>0 0 -9.8</gravity>
     <light name='c1' type='point'>
       <pose>0 0 2 0 -0 0</pose>
